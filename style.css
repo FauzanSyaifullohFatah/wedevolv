@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+body {
+    background: #191919;
+}
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    height: 10dvh;
+    background: #3799df;
+    color: whitesmoke;
+}
+header h1 {
+    user-select: none;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+header h1 img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(10);
+}
+header a {cursor: pointer;}
+header a:hover {
+    color: #37ff00;
+}
+.active i {color: #37ff00;}
+/* --------->>>>> ACTIVE SECTION */
+.menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.actSection {display: flex;}
+/* --------->>>>> HOME */
+/* --------->>>>> HOME HERO */
+.hero {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45dvh;
+    background: linear-gradient(#3799df, #37bbdf);
+}
+.hero h1 {color: #ffffff;}
+/* HUMAN */
+.hero .human {
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    bottom: 0px;
+    left: 110%;
+    opacity: 0.7;
+    filter: drop-shadow(50px 50px 5px #ffffff7f);
+}
+.hero .human:nth-child(1){
+    animation: 10s move linear infinite 0s;
+}
+.hero .human:nth-child(2){
+    animation: 10s move linear reverse infinite 2s;
+    transform: scaleX(-1);
+}
+.hero .human:nth-child(3){
+    animation: 10s move linear infinite 4s;
+}
+.hero .human:nth-child(4){
+    transform: scaleX(-1);
+    animation: 10s move linear reverse infinite 2.3s;
+}
+@keyframes move {
+    0%  {left: 110%;}
+    100%{left: -10%;}
+}
+.hero .human:nth-child(1) .head,
+.hero .human:nth-child(1) .body,
+.hero .human:nth-child(1) .hand,
+.hero .human:nth-child(1) .foot {
+    background: #191919;
+}
+/* HEAD */
+.hero .human .head {
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 100%;
+}
+.hero .human .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 10px;
+    border-radius: 10px 10px 0 0;
+    background: #ffffff;
+}
+/* HUMAN HAND */
+.hero .human .body .hand {
+    position: absolute;
+    width: 7px;
+    height: 40px;
+    background: inherit;
+    transform-origin: top;
+    border-radius: 0 0 10px 10px;
+}
+.hero .human .body .hand:nth-child(1){
+    animation: 1s left ease-in-out infinite;
+}
+.hero .human .body .hand:nth-child(2){
+    animation: 1s right ease-in-out infinite;
+}
+@keyframes right {
+    0%   {transform: rotate(-25deg);}
+    50%  {transform: rotate(25deg);}
+    100% {transform: rotate(-25deg);}
+}
+@keyframes left {
+    0%   {transform: rotate(25deg);}
+    50%  {transform: rotate(-25deg);}
+    100% {transform: rotate(25deg);}
+}
+/* HUMAN FOOT */
+.hero .human .foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background: #ffffff;
+}
+.hero .human .foot .shoe {
+    position: absolute;
+    width: 18px;
+    height: 10px;
+    background: inherit;
+    border-radius: 5px 2px 2px 5px;
+    bottom: 0;
+    right: -2px;
+}
+.hero .human .foot .left,
+.hero .human .foot .right {
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    background: inherit;
+    transform-origin: top;
+    border-radius: 0 0 10px 10px;
+}
+.hero .human .foot .right {
+    animation: left 1s ease-in-out infinite;
+}
+.hero .human .foot .left {
+    animation: right 1s ease-in-out infinite;
+}
+#text::after {
+    content: "|";
+    margin-left: 3px;
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {50% { opacity: 0; }}
+/* ------>>>>> HOME BOTTOM */
+#home .bottom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45dvh;
+    color: #ffffff;
+    background: #191919;
+    text-align: center;
+    gap: 10px;
+}
+#home .bottom p {
+    width: 95%;
+    max-width: 700px;
+}
+#home .bottom .logo {
+    width: 50px;
+    height: 50px;
+    background-image: url(wedevolv.png);
+    background-size: cover;
+}
+#home .bottom a {text-decoration: none;}
+#home .bottom #donate {
+    cursor: pointer;
+    border: none;
+    background: #37bbdf;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 25px;
+    top: 10px;
+    right: 10px;
+    color: whitesmoke;
+}
+#home .bottom .icon {
+    display: flex;
+    gap: 10px;
+    font-size: 30px;
+}
+#home .bottom .icon i {
+    color: #37bbdf;
+}
+#home .bottom #callMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    background: #37bbdf;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px #191919;
+}
+#home .bottom #callMe .fa {
+    font-size: 30px;
+    color: #3ee111;
+}
+/* ------>>>>> SHOP */
+/* ------>>>>> SHOP NAVIGATION */
+#shop .hero {
+    position: relative;
+    height: 20dvh;
+}
+#shop .hero span {
+    z-index: 1;
+    position: absolute;
+    font-size: 60px;
+}
+#shop .hero span:nth-child(1){
+    color: #37bbdf;
+    left: 0;
+    animation: cartLeft 2s linear forwards;
+}
+#shop .hero span:nth-child(2){
+    color: whitesmoke;
+    animation: cartRight 2s linear forwards;
+    transform: scaleX(-1);
+    right: 0;
+}
+@keyframes cartLeft {
+    from {left: 40%;}
+    to   {left: 100%;}
+}
+@keyframes cartRight {
+    from {right: 40%;}
+    to   {right: 100%;}
+}
+#shop .slogan {
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    width: 0;
+    animation: slogan 1s linear forwards;
+}
+@keyframes slogan {
+    0%, 40% {width: 0;}
+    100% {width: 250px;}
+}
+#shop .hero h3 {color: whitesmoke;}
+#shop .hero h2 {color: #37bbdf;
+}
+#shop .nav-shop {
+    top: 10dvh;
+    position: sticky;
+}
+#shop .nav-shop ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background: #191919;
+    list-style: none;
+}
+.nav-shop ul li {
+    width: 100%;
+}
+.nav-shop ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 30px;
+    color: whitesmoke;
+}
+.nav-shop ul li .active {
+    background: #3ee111;
+    text-shadow: 1px 1px 1px black;
+}
+/* PRODUCK ITEMS */
+#shop .product {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+#shop .product .items {
+    background: #ffffff;
+    width: 230px;
+    height: max-content;
+    padding: 5px;
+    box-shadow: 0 0 1px black;
+    border-radius: 10px;
+}
+#shop .items .top {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 1px black;
+    height: 65%;
+}
+#shop .items .top img {
+    width: 100%;
+}
+#shop .items .bottom {
+    padding: 5px;
+    height: 35%;
+}
+#shop .items .bottom .title {
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+#shop .items .bottom .price {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#shop .items .bottom .price b {
+    color: brown;
+}
+#shop .items .bottom .price small {
+    font-size: 0.7rem;
+    color: #616161;
+}
+#shop .items .bottom .rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+#shop .items .bottom .rating i {
+    color: rgb(255, 191, 0);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    background: rgba(255, 217, 0, 0.115);
+}
+#shop .items .bottom .rating a {
+    text-align: center;
+    text-decoration: none;
+    padding: 6px;
+    width: 70%;
+    background: #1e8701;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 0.8rem;
+}
+/* --------->>>>>> SOURCE CODE */
+#source-code {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+#source-code .hero {
+    height: 20dvh;
+    gap: 10px;
+}
+#source-code strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    background: whitesmoke;
+    color: #37bbdf;
+    font-size: 30px;
+    animation: cube 1s linear forwards;
+}
+@keyframes cube {
+    0%, 40%, 60%, 80%, 100% {transform: translateY(0px) scaleY(0.95);}
+    30%  {transform: translateY(-20px);}
+    50%, 70%  {transform: translateY(-5px);}
+}
+#source-code h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    white-space: nowrap;
+    width: 0;
+    overflow: hidden;
+    color: whitesmoke;
+    animation: text 0.1s linear forwards 0.3s;
+}
+@keyframes text {
+    from {width: 0px;opacity: 0;}
+    to {width: 250px;opacity: 1;}
+}
+#source-code article {
+    display: flex;
+    max-width: 1000px;
+    width: 95%;
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    padding: 10px;
+    gap: 10px;
+}
+#source-code article .box {
+    border-radius: inherit;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+#source-code article .box iframe {
+    width: 1000px;
+    height: 1000px;
+    transform: scale(0.2);
+    transform-origin: left top;
+}
+#source-code article .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+}
+#source-code article .information h3 {
+    color: black;
+}
+#source-code article .information .text {
+    color: #616161;
+}
+#source-code article .information .btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#source-code article .information .btn button,
+#source-code article .information .btn a {
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background: transparent;
+    color: black;
+    border: none;
+}
+/* ---------->>>>> DONATION */
+.donation {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0);
+    background: #191919;
+    color: white;
+    border-radius: 10px;
+    outline: 3px solid #37bbdf;
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    gap: 10px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s all;
+}
+.openDonate {
+    transform: translate(-50%, -50%) scale(1);
+}
+.donation button {
+    cursor: pointer;
+    position: absolute;
+    background: transparent;
+    color: #37bbdf;
+    font-size: 30px;
+    right: 8px;
+    top: 5px;
+    border: none;
+}
+.donation strong {color: #37bbdf;}
+.donation img {width: 80%;}
+
+@media only screen and (max-width: 660px){
+    #home .bottom .icon {font-size: 25px;}
+}
+@media only screen and (max-width: 550px){
+    #home .bottom .icon {font-size: 1rem;}
+}
+@media only screen and (max-width: 500px){
+    header {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    header a span {display: none;}
+    header a .fa {font-size: 1.5rem;}
+    #home .bottom {flex-direction: column;}
+    #source-code article {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #source-code article .information {
+        gap: 10px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 490px){
+    #shop .product .items {width: 48%;}
+}
+@media only screen and (max-width: 427px){
+    #home .bottom h2 {font-size: 1rem;}
+    
+    #shop .product .items .price  {font-size: 0.6rem;}
+    #shop .product .items .price small {font-size: 0.6rem;}
+    #shop .product .items .rating i {font-size: 0.5rem;}
+    #shop .product .items .rating a {font-size: 0.5rem;}
+}
+@media only screen and (max-width: 360px){
+    #home .bottom p {font-size: 0.8rem;}
+    #home .bottom .icon {font-size: 0.8rem;}
+}

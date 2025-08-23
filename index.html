@@ -23,10 +23,15 @@
 </head>
 <body>
     <header>
-        <h1><img src="assets/img/logo/wedevolv.png" alt="wedevolv.png">WEDEVOLV</h1>
-        <a class="nav active"><i class="fa fa-home"></i> <span>Home</span></a>
-        <a class="nav"><i class="fa fa-shopping-cart"></i> <span>Shop</span></a>
-        <a class="nav"><i class="fa fa-code"></i> <span>Source Code</span></a>
+        <h1>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540" width="40px">
+                <path d="M 270,289 267,291 188,389 202,404 220,417 234,424 246,428 264,431 289,429 309,422 330,409 350,390 Z" fill="#00c3ff"/>
+                <path d="M 4,118 158,348 269,213 381,348 534,120 484,117 461,123 374,238 269,109 164,238 79,124 59,117 Z" fill="whitesmoke"/>
+            </svg> WEDEVOLV
+        </h1>
+        <a href="#home" class="nav active" aria-label="Home"><i class="fa fa-home"></i> <span>Home</span></a>
+        <a href="#shop" class="nav" aria-label="Shop"><i class="fa fa-shopping-cart"></i> <span>Shop</span></a>
+        <a href="#source-code" class="nav" aria-label="Source Code"><i class="fa fa-code"></i> <span>Source Code</span></a>
     </header>
     <main>
         <section class="menu actSection" id="home">
@@ -75,24 +80,22 @@
                         <div class="right"><div class="shoe"></div></div>
                     </div>
                 </div>
-                <h1 id="text"></h1>
+                <button id="donate" onclick="donation();" aria-label="Donation"><i class="fa fa-usd"></i></button>
+                <h2 id="text"></h2>
             </div>
             <div class="bottom">
-                <button id="donate" class="donate"><i class="fa fa-usd"></i></button>
                 <span>
                     <h2>WUJUDKAN WEBSITE IMPIANMU</h2>
-                    <h5>BERSAMA</h5>
                 </span>
-                <div class="logo"></div>
+                <div class="icon">
+                    <svg class="icon-html" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
+                    <svg class="icon-css" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 32l-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z"/></svg>
+                    <svg class="icon-jscript" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
+                    <svg class="icon-php" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M320 104.5c171.4 0 303.2 72.2 303.2 151.5S491.3 407.5 320 407.5c-171.4 0-303.2-72.2-303.2-151.5S148.7 104.5 320 104.5m0-16.8C143.3 87.7 0 163 0 256s143.3 168.3 320 168.3S640 349 640 256 496.7 87.7 320 87.7zM218.2 242.5c-7.9 40.5-35.8 36.3-70.1 36.3l13.7-70.6c38 0 63.8-4.1 56.4 34.3zM97.4 350.3h36.7l8.7-44.8c41.1 0 66.6 3 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7h-70.7L97.4 350.3zm185.7-213.6h36.5l-8.7 44.8c31.5 0 60.7-2.3 74.8 10.7 14.8 13.6 7.7 31-8.3 113.1h-37c15.4-79.4 18.3-86 12.7-92-5.4-5.8-17.7-4.6-47.4-4.6l-18.8 96.6h-36.5l32.7-168.6zM505 242.5c-8 41.1-36.7 36.3-70.1 36.3l13.7-70.6c38.2 0 63.8-4.1 56.4 34.3zM384.2 350.3H421l8.7-44.8c43.2 0 67.1 2.5 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7H417l-32.8 168.7z"/></svg>
+                    <svg class="icon-database" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z"/></svg>
+                </div>
                 <p>Dari personal blog hingga website bisnis, semuanya bisa dibuat dengan desain yang menarik dan fungsional. Tunggu apalagi!</p>
                 <a id="callMe" href="https://wa.me/6281286400894" target="_blank"><i class="fa fa-phone"></i> Hubungi Saya Sekarang</a>
-                <div class="icon">
-                    <strong><i class="fa fa-html5"></i> HTML</strong>
-                    <strong><i class="fa fa-css3"></i> CSS</strong>
-                    <strong><i>JAVA</i>SCRIPT</strong>
-                    <strong><i>P</i>HP</strong>
-                    <strong><i class="fa fa-database"></i> Mysqli</strong>
-                </div>
             </div>
         </section>
         <section class="menu" id="shop">
@@ -100,8 +103,8 @@
                 <span><i class="fa fa-shopping-cart"></i></span>
                 <span><i class="fa fa-shopping-cart"></i></span>
                 <div class="slogan">
-                    <h3>BELANJA DISINI</h3>
-                    <h2>AFFILIATE PRODUCT</h2>
+                    <h2>BELANJA DISINI</h2>
+                    <h3>AFFILIATE PRODUCT</h3>
                 </div>
             </div>
             <nav class="nav-shop">
@@ -113,375 +116,14 @@
                     <li><a href="" data-filter="skincare" class="filter"> Skincare</a></li>
                 </ul>
             </nav>
-            <div class="product">
-                <article class="items" data-category="skincare">
-                    <div class="top">
-                        <img src="assets/img/product/product16.jpg" alt="skincare.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            [Deep jerawat] Glad2Glow Deep Jerawat Bundle all in 1- 2/3/4/5 PCS Skincare Paket-Gel cleanser + Acne Moisturizer + Serum
-                        </div>
-                        <div class="price">
-                            <b>Rp82.000</b>
-                            <small>714.3K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.8</i> <a href="https://vt.tokopedia.com/t/ZSArPy15u/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">gald2glow.indo</b>
-                    </div>
-                </article>
-                <article class="items" data-category="skincare">
-                    <div class="top">
-                        <img src="assets/img/product/product15.jpg" alt="skincare.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            Glad2Glow Blueberry Creamide Low pH Cleanser - Facial Wash Gentle skincare face wash sabun cuci muka mencerahkan wajah
-                        </div>
-                        <div class="price">
-                            <b>Rp39.000</b>
-                            <small>986.1K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.8</i> <a href="https://vt.tokopedia.com/t/ZSArPxvgQ/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">glad2glow.indo</b>
-                    </div>
-                </article>
-                <article class="items" data-category="accessories">
-                    <div class="top">
-                        <img src="assets/img/product/product14.jpg" alt="cincinCouple.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            Cincin pasangan cincin pria dan wanita cincin pasangan dengan berlian kado pernikahan Original Store Couple Adjustable Aksesoris Anti Karat
-                        </div>
-                        <div class="price">
-                            <b>Rp75.000</b>
-                            <small>11.6K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.8</i> <a href="https://vt.tokopedia.com/t/ZSArfVt8w/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">CHICCO JEWELRY</b>
-                    </div>
-                </article>
-                <article class="items" data-category="accessories">
-                    <div class="top">
-                        <img src="assets/img/product/product13.jpg" alt="gelangRantai.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            GELANG RANTAI BAJA TITANIUM STAINLESS STEEL KUALITAS PREMIUM ANTI KARAT Kulit Silver Bracelets
-                        </div>
-                        <div class="price">
-                            <b>Rp17.400</b>
-                            <small>24.9K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.7</i> <a href="https://vt.tokopedia.com/t/ZSArf6mqN/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">Circle.Jewelry</b>
-                    </div>
-                </article>
-                <article class="items" data-category="fashion">
-                    <div class="top">
-                        <img src="assets/img/product/product12.jpg" alt="kaosPolos.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            HANESA FASHION kaos Paket 6 PCS Kaos Polos 24s 200gsm Soft Handfeel COD free ongkir
-                        </div>
-                        <div class="price">
-                            <b>Rp100.000</b>
-                            <small>208K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.6</i> <a href="https://vt.tokopedia.com/t/ZSArDKNT7/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">Hanesa fashion</b>
-                    </div>
-                </article>
-                <article class="items" data-category="fashion">
-                    <div class="top">
-                        <img src="assets/img/product/product11.jpg" alt="celanaCargo.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            Celana Cargo Panjang Zenomic Loosepant Gombrong Eversize Pria Hitam Baggy Jumbo Big Size
-                        </div>
-                        <div class="price">
-                            <b>Rp95.000</b>
-                            <small>48.7K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.6</i> <a href="https://vt.tokopedia.com/t/ZSArDrafa/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">Zenomic</b>
-                    </div>
-                </article>
-                <article class="items" data-category="electronic">
-                    <div class="top">
-                        <img src="assets/img/product/product10.jpg" alt="headsetJBL.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            JBL Phantom 4 Earbuds Earphone Nirkabel Sejati Peredam Kebisingan Pembaruan Headset Bluetooth HD Musik
-                        </div>
-                        <div class="price">
-                            <b>Rp43.999</b>
-                            <small>52.2K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.8</i> <a href="https://vt.tokopedia.com/t/ZSArApEsb/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">VEHRO SHOP</b>
-                    </div>
-                </article>
-                <article class="items" data-category="electronic">
-                    <div class="top">
-                        <img src="assets/img/product/product9.jpg" alt="mouse.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            MOFii Bluetooth Mouse Wireless Gaming 2 Models Rechargeable Baterai Type-C Fast Charging 1600DPI Light P6
-                        </div>
-                        <div class="price">
-                            <b>Rp65.000</b>
-                            <small>61.5K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.9</i> <a href="https://vt.tokopedia.com/t/ZSArAMsMB/" target="_blank">Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">MOFii Indonesia</b>
-                    </div>
-                </article>
-                <article class="items" data-category="skincare">
-                    <div class="top">
-                        <img src="assets/img/product/product8.jpg" alt="skincare.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            [Special Promo] Glad2Glow Day & Night 6in1 Renew Set - Brightening Moisturizer + Toner + Cleanser
-                        </div>
-                        <div class="price">
-                            <b>Rp201.000</b>
-                            <small>1.3M terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.8</i> <a href="https://vt.tokopedia.com/t/ZSA6SoGpL/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">gald2glow.indo</b>
-                    </div>
-                </article>
-                <article class="items" data-category="skincare">
-                    <div class="top">
-                        <img src="assets/img/product/product7.jpg" alt="skincare.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            [Buy 5 Get 7] Glad2Glow Renew bundle 7in1 -Brightening Moisturizer + Toner + Milk Cleanser
-                        </div>
-                        <div class="price">
-                            <b>Rp240.000</b>
-                            <small>1.2M terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.8</i> <a href="https://vt.tokopedia.com/t/ZSA6AN4JW/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">glad2glow.indo</b>
-                    </div>
-                </article>
-                <article class="items" data-category="accessories">
-                    <div class="top">
-                        <img src="assets/img/product/product6.jpg" alt="cincin-unisex.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            6 Pcs Cincin Unik Unisex Aksesoris Fashion Cincin Pria Perhiasan Ring
-                        </div>
-                        <div class="price">
-                            <b>Rp14.900</b>
-                            <small>4730 terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.6</i> <a href="https://vt.tokopedia.com/t/ZSA2KeBwx/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">VIMEL-VN</b>
-                    </div>
-                </article>
-                <article class="items" data-category="accessories">
-                    <div class="top">
-                        <img src="assets/img/product/product5.jpg" alt="kacamata.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            Kacamata Antiradiasi blueray Pria Dan Wanita Melindungi Mata Dari Bahaya Sinar Biru uv Hp Laptop Dan Komputer Antiradiasi Frame Eyewear
-                        </div>
-                        <div class="price">
-                            <b>Rp11.400</b>
-                            <small>46.4K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.8</i> <a href="https://vt.tokopedia.com/t/ZSA2wxqKp/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">sobat optik</b>
-                    </div>
-                </article>
-                <article class="items" data-category="fashion">
-                    <div class="top">
-                        <img src="assets/img/product/product4.jpg" alt="celana.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            Furiex - celana panjang pria loose pants fit pinggang karet celana bagypnats pria woll blazer Casual Formal
-                        </div>
-                        <div class="price">
-                            <b>Rp110.250</b>
-                            <small>54.5K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.8</i> <a href="https://vt.tokopedia.com/t/ZSA2wMubJ/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">furiex</b>
-                    </div>
-                </article>
-                <article class="items" data-category="fashion">
-                    <div class="top">
-                        <img src="assets/img/product/product3.jpg" alt="sepatu.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            [Christy Shoes] BOSTANTEN Mode Liar Sepatu Dexun Nyaman Murid Sepatu kets Krem Hitam Ringan Nyaman Anti Selip
-                        </div>
-                        <div class="price">
-                            <b>Rp149.999</b>
-                            <small>15.8K terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.9</i> <a href="https://vt.tokopedia.com/t/ZSA2wdoDN/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">BOSTANTEN.SHOES</b>
-                    </div>
-                </article>
-                <article class="items" data-category="electronic">
-                    <div class="top">
-                        <img src="assets/img/product/product2.jpg" alt="mouse.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            MOFII Mouse Gaming Wireless 2.4Ghz + Bluetooth Rechargeable Baterai Type-C Fast Charging 3200DPI LED Light M69
-                        </div>
-                        <div class="price">
-                            <b>Rp124.900</b>
-                            <small>306 terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.9</i> <a href="https://vt.tokopedia.com/t/ZSA2whyfL/" target="_blank"> Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">MOFII Indonesia</b>
-                    </div>
-                </article>
-                <article class="items" data-category="electronic">
-                    <div class="top">
-                        <img src="assets/img/product/product1.jpg" alt="keyboard.jpg">
-                    </div>
-                    <div class="bottom">
-                        <div class="title">
-                            Rexus K9G / K9-G Keyboard Fortess Wired Gaming Keyboard RGB
-                        </div>
-                        <div class="price">
-                            <b>Rp75.100</b>
-                            <small>8468 terjual online</small>
-                        </div>
-                        <div class="rating">
-                            <i class="fa fa-star"> 4.6</i> <a href="https://vt.tokopedia.com/t/ZSA2TXTRa/" target="_blank">Beli Sekarang Juga</a>
-                        </div>
-                        <b style="font-size: 10px;">TokoTeknoPro</b>
-                    </div>
-                </article>
-            </div>
+            <div class="product"></div>
         </section>
         <section class="menu" id="source-code">
             <div class="hero">
                 <strong><i class="fa fa-code"></i></strong>
-                <h1>SOURCE CODE GRATIS</h1>
+                <h2>SOURCE CODE GRATIS</h2>
             </div>
-            <article class="source-code">
-                <div class="preview">
-                    <img src="assets/img/sc/sc4.png" alt="preview.png">
-                </div>
-                <div class="information">
-                    <h3>Landing Page</h3>
-                    <div class="text">
-                        Membangun landing page modern & interaktif yang bukan cuma enak dilihat, tapi juga nyaman digunakan.
-                        Dibuat menggunakan HTML & CSS.
-                        Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian.
-                        Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨
-                    </div>
-                    <div class="btn">
-                        <a href="https://fauzansyaifullohfatah.github.io/LandingPage/" target="_blank"><i class="fa fa-external-link"></i> Lihat</a>
-                        <button><i class="fa fa-clone"></i> Copy Source Code</button>
-                        <button class="donate"><i class="fa fa-usd"></i> Donate</button>
-                    </div>
-                </div>
-            </article>
-            <article class="source-code">
-                <div class="preview">
-                    <img src="assets/img/sc/sc3.png" alt="preview.png">
-                </div>
-                <div class="information">
-                    <h3>Form Login/Register</h3>
-                    <div class="text">
-                        Ini adalah contoh form Login dan Register yang dibuat menggunakan HTML, CSS, dan JavaScript.
-                        Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian.
-                        Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨
-                    </div>
-                    <div class="btn">
-                        <a href="https://fauzansyaifullohfatah.github.io/FormLogin/" target="_blank"><i class="fa fa-external-link"></i> Lihat</a>
-                        <button><i class="fa fa-clone"></i> Copy Source Code</button>
-                        <button class="donate"><i class="fa fa-usd"></i> Donate</button>
-                    </div>
-                </div>
-            </article>
-            <article class="source-code">
-                <div class="preview">
-                    <img src="assets/img/sc/sc2.png" alt="preview.png">
-                </div>
-                <div class="information">
-                    <h3>Drumpad | Using Keyboard</h3>
-                    <div class="text">
-                        Ini adalah contoh sederhana membuat Drumpad untuk hiburan yang dibuat menggunakan HTML, CSS, dan JavaScript.
-                        Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian.
-                        Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨
-                    </div>
-                    <div class="btn">
-                        <a href="https://fauzansyaifullohfatah.github.io/DrumPad/" target="_blank"><i class="fa fa-external-link"></i> Lihat</a>
-                        <button><i class="fa fa-clone"></i> Copy Source Code</button>
-                        <button class="donate"><i class="fa fa-usd"></i> Donate</button>
-                    </div>
-                </div>
-            </article>
-            <article class="source-code">
-                <div class="preview">
-                    <img src="assets/img/sc/sc1.png" alt="preview.png">
-                </div>
-                <div class="information">
-                    <h3>Keyboard Test</h3>
-                    <div class="text">
-                        Ini adalah Keyboard Test yang dibuat menggunakan HTML, CSS, dan JavaScript.
-                        Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian.
-                        Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨
-                    </div>
-                    <div class="btn">
-                        <a href="https://fauzansyaifullohfatah.github.io/keyboardtest/" target="_blank"><i class="fa fa-external-link"></i> Lihat</a>
-                        <button><i class="fa fa-clone"></i> Copy Source Code</button>
-                        <button class="donate"><i class="fa fa-usd"></i> Donate</button>
-                    </div>
-                </div>
-            </article>
+            <div class="mySourceCode"></div>
         </section>
         <div class="donation">
             <h2>Support Us / <strong>Donate</strong></h2>
@@ -490,7 +132,7 @@
                 <p>Fauzan Syaifulloh Fatah</p>
                 <p><strong>Blu BCA</strong> 0094-4102-874</p>
             </div>
-            <button id="closeDonate"><i class="fa fa-window-close"></i></button>
+            <button id="closeDonate" aria-label="Close Donation"><i class="fa fa-window-close"></i></button>
         </div>
     </main>
     <script src="assets/js/script.js"></script>

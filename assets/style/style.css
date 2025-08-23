@@ -5,39 +5,30 @@
     font-family: sans-serif;
     text-decoration: none;
 }
-body {
-    background: #191919;
-}
+body {background: #191919;}
 header {
     z-index: 1;
     position: sticky;
-    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background: #191919;
     padding: 0 10px;
     height: 10dvh;
-    background: #3799df;
+    top: 0;
     color: whitesmoke;
 }
 header h1 {
-    user-select: none;
-    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    font-size: 1.5rem;
     gap: 10px;
 }
-header h1 img {
-    width: 35px;
-    height: 35px;
-    filter: brightness(10);
-}
-header a {cursor: pointer;}
-header a:hover {
-    color: #37ff00;
-}
-.active i {color: #37ff00;}
+header a {color: whitesmoke;}
+header a:hover {color: #00c3ff;}
+.active i {color: #00c3ff;}
 /* --------->>>>> ACTIVE SECTION */
 .menu {
     width: 100%;
@@ -58,10 +49,9 @@ header a:hover {
     height: 45dvh;
     background: linear-gradient(#3799df, #37bbdf);
 }
-.hero h1 {color: #ffffff;}
+.hero h2 {color: #ffffff;}
 /* HUMAN */
 .hero .human {
-    z-index: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -70,7 +60,7 @@ header a:hover {
     bottom: 0px;
     left: 110%;
     opacity: 0.7;
-    filter: drop-shadow(50px 50px 5px #ffffff7f);
+    filter: drop-shadow(50px 50px 5px whitesmoke);
 }
 .hero .human:nth-child(1){
     animation: 10s move linear infinite 0s;
@@ -100,7 +90,7 @@ header a:hover {
 .hero .human .head {
     width: 25px;
     height: 25px;
-    background: #ffffff;
+    background: whitesmoke;
     border-radius: 100%;
 }
 .hero .human .body {
@@ -110,7 +100,7 @@ header a:hover {
     height: 40px;
     width: 10px;
     border-radius: 10px 10px 0 0;
-    background: #ffffff;
+    background: whitesmoke;
 }
 /* HUMAN HAND */
 .hero .human .body .hand {
@@ -143,13 +133,13 @@ header a:hover {
     justify-content: center;
     align-items: center;
     height: 40px;
-    background: #ffffff;
+    background: whitesmoke;
 }
 .hero .human .foot .shoe {
     position: absolute;
+    background: inherit;
     width: 18px;
     height: 10px;
-    background: inherit;
     border-radius: 5px 2px 2px 5px;
     bottom: 0;
     right: -2px;
@@ -169,42 +159,11 @@ header a:hover {
 .hero .human .foot .left {
     animation: right 1s ease-in-out infinite;
 }
-#text::after {
-    content: "|";
-    margin-left: 3px;
-    display: inline-block;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink {50% { opacity: 0; }}
-/* ------>>>>> HOME BOTTOM */
-#home .bottom {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 45dvh;
-    color: #ffffff;
-    background: #191919;
-    text-align: center;
-    gap: 10px;
-}
-#home .bottom p {
-    width: 95%;
-    max-width: 700px;
-}
-#home .bottom .logo {
-    width: 50px;
-    height: 50px;
-    background-image: url(wedevolv.png);
-    background-size: cover;
-}
-#home .bottom a {text-decoration: none;}
-#home .bottom #donate {
-    cursor: pointer;
-    border: none;
-    background: #37bbdf;
+.hero #donate {
     position: absolute;
+    cursor: pointer;
+    background: #191919;
+    border: none;
     width: 35px;
     height: 35px;
     border-radius: 10px;
@@ -213,30 +172,59 @@ header a:hover {
     right: 10px;
     color: whitesmoke;
 }
+#text::after {
+    content: "|";
+    margin-left: 3px;
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {50% { opacity: 0; }}
+#home .bottom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 45dvh;
+    align-items: center;
+    color: whitesmoke;
+    text-align: center;
+    gap: 10px;
+}
+#home .bottom p {
+    width: 95%;
+    max-width: 700px;
+}
 #home .bottom .icon {
     display: flex;
-    gap: 10px;
+    justify-content: space-around;
+    padding: 10px;
+    width: 90%;
     font-size: 30px;
 }
-#home .bottom .icon i {
-    color: #37bbdf;
+#home .bottom .icon svg {
+    border-radius: 10px;
+    background: #191919;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    fill: whitesmoke;
 }
+
 #home .bottom #callMe {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     font-size: 18px;
-    background: #37bbdf;
     padding: 5px 20px;
     border-radius: 5px;
-    border: none;
     color: whitesmoke;
+    /* color: #3ee111; */
     text-shadow: 1px 1px 1px #191919;
 }
 #home .bottom #callMe .fa {
     font-size: 30px;
-    color: #3ee111;
+    color: #00c3ff;
 }
 /* ------>>>>> SHOP */
 /* ------>>>>> SHOP NAVIGATION */
@@ -279,8 +267,8 @@ header a:hover {
     0%, 40% {width: 0;}
     100% {width: 250px;}
 }
-#shop .hero h3 {color: whitesmoke;}
-#shop .hero h2 {color: #37bbdf;
+#shop .hero h2 {color: whitesmoke;}
+#shop .hero h3 {color: #37bbdf;
 }
 #shop .nav-shop {
     top: 10dvh;
@@ -301,14 +289,15 @@ header a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+    padding: 5px;
     width: 100%;
     height: 30px;
     color: whitesmoke;
+    border-radius: 20px;
 }
 .nav-shop ul li .active {
-    background: #3ee111;
-    text-shadow: 1px 1px 1px black;
+    background: white;
+    color: black;
 }
 /* PRODUCK ITEMS */
 #shop .product {
@@ -319,7 +308,7 @@ header a:hover {
     padding: 10px;
 }
 #shop .product .items {
-    background: #ffffff;
+    background: whitesmoke;
     width: 230px;
     height: max-content;
     padding: 5px;
@@ -356,9 +345,7 @@ header a:hover {
     align-items: center;
     justify-content: space-between;
 }
-#shop .items .bottom .price b {
-    color: brown;
-}
+#shop .items .bottom .price b {color: brown;}
 #shop .items .bottom .price small {
     font-size: 0.7rem;
     color: #616161;
@@ -378,7 +365,6 @@ header a:hover {
 }
 #shop .items .bottom .rating a {
     text-align: center;
-    text-decoration: none;
     padding: 6px;
     width: 70%;
     background: #1e8701;
@@ -391,7 +377,6 @@ header a:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding-bottom: 10px;
 }
 #source-code .hero {
     height: 20dvh;
@@ -414,18 +399,22 @@ header a:hover {
     30%  {transform: translateY(-20px);}
     50%, 70%  {transform: translateY(-5px);}
 }
-#source-code h1 {
+#source-code h2 {
     font-size: 1.2rem;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    color: whitesmoke;
     animation: text 0.3s linear forwards 0.2s;
     transform: translateY(100px);
 }
 @keyframes text {
     from {transform: translateY(100px);}
     to   {transform: translateY(0px);}
+}
+#source-code .mySourceCode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
 }
 #source-code article {
     display: flex;
@@ -485,7 +474,7 @@ header a:hover {
     justify-content: center;
     transform: translate(-50%, -50%) scale(0);
     background: #191919;
-    color: white;
+    color: whitesmoke;
     border-radius: 10px;
     outline: 3px solid #37bbdf;
     max-width: 400px;
@@ -511,7 +500,6 @@ header a:hover {
 }
 .donation strong {color: #37bbdf;}
 .donation img {width: 80%;}
-
 @media only screen and (max-width: 660px){
     #home .bottom .icon {font-size: 25px;}
 }
@@ -552,4 +540,7 @@ header a:hover {
 @media only screen and (max-width: 360px){
     #home .bottom p {font-size: 0.8rem;}
     #home .bottom .icon {font-size: 0.8rem;}
+}
+@media only screen and (max-width: 320px){
+    #shop .product .items {width: 100%;}
 }

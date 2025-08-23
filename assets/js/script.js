@@ -37,11 +37,12 @@ nav.forEach((el, i) => {
     }
 });
 // FILTER
+const product = document.getElementsByClassName("product")[0];
 const filterProduct = document.querySelectorAll(".filter");
-const itemsProduct = document.querySelectorAll(".items");
 filterProduct.forEach((el) => {
     el.onclick = function(event){
         event.preventDefault();
+        const itemsProduct = document.querySelectorAll(".items");
         filterProduct.forEach(f => f.classList.remove("active"));
         el.classList.add("active");
         var filter = el.getAttribute("data-filter");
@@ -57,24 +58,77 @@ filterProduct.forEach((el) => {
         } else {
             itemsProduct.forEach(i => (i.style.display = "block"));
         }
+        itemsProduct.forEach((e) => {
+            e.onclick = function(){
+                var linkProduct = e.getElementsByTagName("a")[0];
+                linkProduct.click();
+            }
+        })
     }
 })
-
 const boxDonation = document.getElementsByClassName("donation")[0];
-const donate = document.querySelectorAll(".donate");
-donate.forEach((el) => {
-    el.onclick = function(){
-        boxDonation.classList.add("openDonate");
-        var back = document.getElementById("closeDonate");
-        back.onclick = function(){
-            boxDonation.classList.remove("openDonate");
-        }
+function donation(){
+    boxDonation.classList.add("openDonate");
+    var back = document.getElementById("closeDonate");
+    back.onclick = function(){
+        boxDonation.classList.remove("openDonate");
     }
-})
-const productItems = document.querySelectorAll(".items");
-productItems.forEach((e) => {
-    e.onclick = function(){
-        var linkProduct = e.getElementsByTagName("a")[0];
-        linkProduct.click();
+}
+const mySourceCode = document.getElementsByClassName("mySourceCode")[0];
+async function getData(){
+    try {
+        const response = await fetch("data.json");
+        const data = await response.json();
+        data.source.sort((a, b) => b.id - a.id);
+        data.source.forEach(e => {
+            mySourceCode.innerHTML += `
+            <article class="source-code">
+                <div class="preview">
+                    <img src="assets/img/sc/sc${e.id}.png" alt="Preview" loading="lazy">
+                </div>
+                <div class="information">
+                    <h3>${e.title}</h3>
+                    <div class="text">${e.description}</div>
+                    <div class="btn">
+                        <a href="${e.link}" target="_blank">
+                            <i class="fa fa-external-link"> Lihat</i>
+                        </a>
+                        <button><i class="fa fa-clone"></i> Copy Source Code</button>
+                        <button onclick="donation();"><i class="fa fa-usd"></i> Donate</button>
+                    </div>
+                </div>
+            </article>
+            `;
+        })
+        data.product.sort((a, b) => b.id - a.id);
+        data.product.forEach(e => {
+            product.innerHTML += `
+            <article class="items" data-category="${e.category}">
+                <div class="top">
+                    <img src="assets/img/product/product${e.id}.jpg" alt="${e.category}">
+                </div>
+                <div class="bottom">
+                    <div class="title">${e.title}</div>
+                    <div class="price">
+                        <b>${e.price}</b>
+                        <small>${e.selling} terjual online</small>
+                    </div>
+                    <div class="rating">
+                        <i class="fa fa-star"> 4.8</i> <a href="${e.link}" target="_blank"> Beli Sekarang Juga</a>
+                    </div>
+                    <b style="font-size: 10px;">${e.brand}</b>
+                </div>
+            </article>
+            `;
+        })
+        document.querySelectorAll(".items").forEach((e) => {
+            e.onclick = function(){
+                var linkProduct = e.getElementsByTagName("a")[0];
+                linkProduct.click();
+            }
+        })
+    } catch {
+        console.error("Error", error);
     }
-})
+}
+getData();

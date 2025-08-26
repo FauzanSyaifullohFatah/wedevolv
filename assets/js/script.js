@@ -1,114 +1,46 @@
-const myText = ["WEDEVOLV.COM"];
-const dplText = document.getElementById("text");
-let textIndex = 0;
-let charIndex = 0;
-let deleting = false;
-function typeEffect() {
-    let currentText = myText[textIndex];
-    if (!deleting) {
-        dplText.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-        if (charIndex === currentText.length) {
-            deleting = true;
-            setTimeout(typeEffect, 1500);
-            return;
-        }
-    } else {
-        dplText.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-        if (charIndex === 0) {
-            deleting = false;
-            textIndex = (textIndex + 1) % myText.length;
-        }
-    }
-    setTimeout(typeEffect, deleting ? 50 : 100);
-}
-typeEffect();
-// NAVBAR
-const nav = document.querySelectorAll(".nav");
-const menu = document.querySelectorAll(".menu");
-nav.forEach((el, i) => {
-    el.onclick = function(event){
-        event.preventDefault();
-        nav.forEach(n => n.classList.remove("active"));
-        menu.forEach(m => (m.classList.remove("actSection")));
-        el.classList.add("active");
-        menu[i].classList.add("actSection");
-    }
-});
-// FILTER
-const product = document.getElementsByClassName("product")[0];
-const filterProduct = document.querySelectorAll(".filter");
-filterProduct.forEach((el) => {
-    el.onclick = function(event){
-        event.preventDefault();
-        const itemsProduct = document.querySelectorAll(".items");
-        filterProduct.forEach(f => f.classList.remove("active"));
-        el.classList.add("active");
-        var filter = el.getAttribute("data-filter");
-        if (filter !== "all"){
-            itemsProduct.forEach((i) => {
-                var category = i.getAttribute("data-category");
-                if (category === filter){
-                    i.style.display = "block";
-                } else {
-                    i.style.display = "none";
-                }
-            });
-        } else {
-            itemsProduct.forEach(i => (i.style.display = "block"));
-        }
-        itemsProduct.forEach((e) => {
-            e.onclick = function(){
-                var linkProduct = e.getElementsByTagName("a")[0];
-                linkProduct.click();
-            }
-        })
-    }
-})
-const boxDonation = document.getElementsByClassName("donation")[0];
-function donation(){
-    boxDonation.classList.add("openDonate");
-    var back = document.getElementById("closeDonate");
-    back.onclick = function(){
-        boxDonation.classList.remove("openDonate");
-    }
-}
-const mySourceCode = document.getElementsByClassName("mySourceCode")[0];
-async function getData(){
+async function getDataSourceCode(fileJson, boxElement){
     try {
-        const response = await fetch("data.json");
+        const response = await fetch(`../json/${fileJson}.json`);
         const data = await response.json();
         data.source.sort((a, b) => b.id - a.id);
         data.source.forEach(e => {
-            mySourceCode.innerHTML += `
-            <article class="source-code">
-                <div class="preview">
-                    <img src="assets/img/sc/sc${e.id}.png" alt="Preview" loading="lazy">
+            boxElement.innerHTML += `
+            <article>
+                <div class="pict">
+                    <div class="landscape">
+                        <img src="assets/img/sc/sc${e.id}.png" alt="${e.title}.Image">
+                    </div>
                 </div>
                 <div class="information">
-                    <h3>${e.title}</h3>
-                    <div class="text">${e.description}</div>
-                    <div class="btn">
-                        <a href="${e.link}" target="_blank">
-                            <i class="fa fa-external-link"> Lihat</i>
-                        </a>
-                        <button><i class="fa fa-clone"></i> Copy Source Code</button>
-                        <button onclick="donation();"><i class="fa fa-usd"></i> Donate</button>
-                    </div>
+                    <h2><i class="fa fa-code"></i> ${e.title}</h2>
+                    <div class="description">${e.description}</div>
+                    <ul>
+                        <li><a href="${e.link}" target="_blank">Lihat</a></li>
+                        <li><a href="">Download</a></li>
+                        <li><button onclick="donate();">Donate</button></li>
+                    </ul>
                 </div>
             </article>
             `;
         })
+        console.log("hay santi");
+    } catch {
+        console.error("Error", error);
+    }
+}
+async function getDataProduct(fileJson, boxElement){
+    try {
+        const response = await fetch(`../json/${fileJson}.json`);
+        const data = await response.json();
         data.product.sort((a, b) => b.id - a.id);
         data.product.forEach(e => {
-            product.innerHTML += `
-            <article class="items" data-category="${e.category}">
+            boxElement.innerHTML += `
+            <article class="product" data-category="${e.category}">
                 <div class="top">
                     <img src="assets/img/product/product${e.id}.jpg" alt="${e.category}">
                 </div>
                 <div class="bottom">
-                    <div class="title">${e.title}</div>
+                    <div class="title" style="color: black;">${e.title}</div>
                     <div class="price">
                         <b>${e.price}</b>
                         <small>${e.selling} terjual online</small>
@@ -121,14 +53,42 @@ async function getData(){
             </article>
             `;
         })
-        document.querySelectorAll(".items").forEach((e) => {
-            e.onclick = function(){
-                var linkProduct = e.getElementsByTagName("a")[0];
-                linkProduct.click();
-            }
+    } catch {
+        console.error("Error", error);
+    }
+}
+async function getDataPackage(boxElement){
+    const whatsApp = 6283848006479;
+    try {
+        const response = await fetch(`../json/packages.json`);
+        const data = await response.json();
+        // data.packages.sort((a, b) => b.id - a.id);
+        data.packages.forEach(e => {
+            var fiturList = "";
+            const list = e.fitur.forEach(l =>{
+                fiturList += `<li><i class="fa fa-check-circle-o"></i> ${l}</li>`;
+                return fiturList;
+            })
+            const pesan = `Halo, Saya ingin memesan ${e.type}-Website.`;
+            boxElement.innerHTML += `
+            <div class="package">
+                <div class="type"><h3>${e.type}</h3></div>
+                <div class="pricing">Mulai Dari <b>${e.pricing}</b></div>
+                <div class="description">${e.description}</div>
+                <ul class="fitur">${fiturList}</ul>
+                <div class="cta">
+                    <b>${e.cta}</b>
+                    <a href="https://wa.me/${whatsApp}?text=${encodeURIComponent(pesan)}" target="_blank"><i class="fa fa-shopping-cart"></i>Pesan Sekarang</a>
+                </div>
+            </div>
+            `;
+            console.log(fiturList);
         })
     } catch {
         console.error("Error", error);
     }
 }
-getData();
+const openNavigation = document.getElementById("open-navigation");
+window.onresize = function(){
+    openNavigation.checked = false;
+}

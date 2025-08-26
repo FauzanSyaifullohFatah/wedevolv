@@ -1,0 +1,28 @@
+{
+    "source" : [
+        {
+            "id" : 1,
+            "title" : "Keyboard Test",
+            "description" : "Ini adalah Keyboard Test yang dibuat menggunakan HTML, CSS, dan JavaScript. Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian. Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/keyboardtest/"
+        },
+        {
+            "id" : 2,
+            "title" : "Drumpad | Using Keyboard",
+            "description" : "Ini adalah contoh sederhana membuat Drumpad untuk hiburan yang dibuat menggunakan HTML CSS, dan JavaScript. Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian. Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/DrumPad/"
+        },
+        {
+            "id" : 3,
+            "title" : "Form Login/Register",
+            "description" : "Ini adalah contoh form Login dan Register yang dibuat menggunakan HTML, CSS, dan JavaScript. Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian. Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/FormLogin/"
+        },
+        {
+            "id" : 4,
+            "title" : "Landing Page",
+            "description" : "Membangun landing page modern & interaktif yang bukan cuma enak dilihat, tapi juga nyaman digunakan. Dibuat menggunakan HTML & CSS. Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian. Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/LandingPage/"
+        }
+    ]
+}

@@ -58,7 +58,7 @@ async function getDataProduct(fileJson, boxElement){
     }
 }
 async function getDataPackage(boxElement){
-    const whatsApp = 6283848006479;
+    const whatsApp = 6281286400894;
     try {
         const response = await fetch(`../json/packages.json`);
         const data = await response.json();

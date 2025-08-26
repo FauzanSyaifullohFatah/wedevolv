@@ -1,0 +1,82 @@
+{
+    "packages": [
+      {
+        "id": 1,
+        "type": "Paket Ultra Hemat",
+        "pricing": "200.000 - 450.000",
+        "description": "Pilihan termurah untuk personal portofolio atau landing page sederhana.",
+        "fitur": [
+          "1 Halaman statis (HTML/CSS, desain sederhana)",
+          "Template standar (2-3 opsi)",
+          "Responsif dasar (mobile-friendly)",
+          "Hosting via GitHub Pages (gratis)"
+        ],
+        "cta": "Langkah Awal - Menuju Digital"
+      },
+      {
+        "id": 2,
+        "type": "Paket Starter",
+        "pricing": "500.000 - 900.000",
+        "description": "Cocok untuk usaha kecil, personal branding, atau portofolio modern.",
+        "fitur": [
+          "1 Halaman landing page (HTML/CSS/JS)",
+          "Desain responsif (mobile friendly)",
+          "SEO dasar (title, meta, sitemap)",
+          "Gratis domain .my.id (1 tahun)",
+          "Hosting via GitHub Pages (gratis)"
+        ],
+        "cta": "Onlinekan Kebutuhanmu"
+      },
+      {
+        "id": 3,
+        "type": "Paket Basic",
+        "pricing": "1.000.000 - 2.000.000",
+        "description": "Solusi lengkap untuk usaha kecil yang butuh website sederhana tapi profesional.",
+        "fitur": [
+          "1–3 Halaman (Home, About, Contact)",
+          "Desain responsif (mobile friendly)",
+          "SEO dasar + optimasi kecepatan & heading",
+          "Integrasi WhatsApp/Email",
+          "Gratis domain .my.id (1 tahun)",
+          "Hosting gratis 1 tahun",
+          "Free 1x perbaikan kecil (bug fix, edit teks/gambar)"
+        ],
+        "cta": "Cocok Untuk Pemula - Pesan Sekarang"
+      },
+      {
+        "id": 4,
+        "type": "Paket Pro",
+        "pricing": "3.000.000 - 5.000.000",
+        "description": "Paket populer untuk UMKM yang butuh website profesional dan modern.",
+        "fitur": [
+          "5–10 Halaman (Home, Produk, Layanan, Portofolio, About, Contact, dll)",
+          "Desain custom modern",
+          "SEO lebih lengkap (struktur schema, meta lengkap, sitemap)",
+          "Integrasi media sosial",
+          "Formulir pemesanan/booking",
+          "Gratis domain .com (1 tahun)",
+          "Hosting gratis 1 tahun",
+          "Free 1–3x perbaikan kecil (bug fix, edit teks/gambar)"
+        ],
+        "cta": "Tingkatkan Bisnismu - Mulai dari Sini"
+      },
+      {
+        "id": 5,
+        "type": "Paket Premium",
+        "pricing": "7.000.000 - 15.000.000",
+        "description": "Cocok untuk perusahaan, startup, atau brand besar yang butuh solusi custom dan lengkap.",
+        "fitur": [
+          "Unlimited halaman",
+          "Desain eksklusif sesuai brand identity",
+          "Fitur custom (E-commerce, dashboard admin, dll)",
+          "Optimasi SEO lanjutan (speed, schema, backlink setup)",
+          "Gratis domain .com (1 tahun)",
+          "Gratis email bisnis (1 tahun)",
+          "Hosting VPS / Cloud (1 tahun)",
+          "SSL gratis & keamanan tinggi",
+          "Maintenance & update gratis 6 bulan"
+        ],
+        "cta": "Solusi Lengkap - Konsultasi Gratis"
+      }
+    ]
+}

@@ -24,5 +24,11 @@
             "description" : "Membangun landing page modern & interaktif yang bukan cuma enak dilihat, tapi juga nyaman digunakan. Dibuat menggunakan HTML & CSS. Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian. Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨",
             "link" : "https://fauzansyaifullohfatah.github.io/LandingPage/"
         }
+        {
+            "id" : 5,
+            "title" : "Roll Dice",
+            "description" : "Ini sebuah project sederhana tapi seru yang bisa kamu coba langsung di browser. 🎲 Dengan project ini, kamu bisa melempar dadu digital hanya dengan sekali klik tombol. Hasilnya langsung acak dari angka 1 sampai 6, persis seperti dadu sungguhan. Kenapa saya buat ini? Karena seringkali kita butuh dadu untuk main game, menentukan giliran, atau sekadar seru-seruan bersama teman, tapi kadang nggak punya dadu fisik. Nah, dengan Roll Dice ini, semuanya jadi praktis — tinggal buka web dan klik tombolnya. 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/rolldice/"
+        }
     ]
 }

@@ -23,7 +23,6 @@ async function getDataSourceCode(fileJson, boxElement){
             </article>
             `;
         })
-        console.log("hay santi");
     } catch {
         console.error("Error", error);
     }
@@ -82,7 +81,6 @@ async function getDataPackage(boxElement){
                 </div>
             </div>
             `;
-            console.log(fiturList);
         })
     } catch {
         console.error("Error", error);

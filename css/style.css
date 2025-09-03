@@ -8,16 +8,26 @@
     text-decoration: none;
 }
 body {
-    background: linear-gradient(to right bottom,#041983, #0728ce);
-    background-color: #041983;
     color: whitesmoke;
     width: 100%;
     overflow-x: hidden;
 }
+body .bg {
+    z-index: -1;
+    position: fixed;
+    background-image: url(../assets/img/background/WedevolvDesign.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100dvh;
+    box-shadow: 0 0 500px black inset;
+    filter: brightness(0.4);
+}
 header {
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
     height: 10dvh;
     width: 100%;
 }
@@ -73,8 +83,8 @@ header nav ul li a {
     justify-content: center;
     align-items: center;
     height: 40dvh;
-    background: #d1d2d2;
-    color: black;
+    padding: 20px;
+    text-align: center;
 }
 #open-navigation, header label, header span p{
     display: none;
@@ -94,41 +104,38 @@ header nav ul li a {
 }
 section {
     display: flex;
-    height: 70dvh;
-}
-section .box {
-    display: flex;
     flex-direction: column;
+    height: 70dvh;
+    padding: 30px;
     justify-content: center;
-    align-items: start;
-    gap: 30px;
-    width: 50%;
-}
-section .box:nth-child(1){
-    width: 70%;
-    padding: 0 100px;
-}
-section  p {
-    font-size: 1.3rem;
-}
-section .box a {
-    text-decoration: none;
-    color: #041983;
-    background: #00eeff;
-    border-radius: 20px;
-    padding: 5px 50px;
-    font-size: 2rem;
-}
-section .box h2 {font-size: 2.5rem;}
-section .box h2 strong {color: #00eeff;}
-section .box:nth-child(2){
     align-items: center;
+    text-align: center;
+    gap: 10px;
 }
-section .box:last-child svg {
-    width: 70%;
+section h1 {
+    font-size: 3rem;
 }
-section .box:last-child svg path:nth-child(1){fill: whitesmoke;}
-section .box:last-child svg path:nth-child(2){fill: #00eeff;}
+section h1 strong {color: #00eeff;}
+/* SOURCE CODE */
+.hero-source {
+    gap: 20px;
+}
+.hero-source span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.hero-source span i {
+    font-size: 40px;
+    padding: 5px;
+    background: #ffae00;
+    border-radius: 50px;
+}
+.hero-source span i svg {
+    stroke: black;
+    stroke-width: 5px;
+}
 .source {
     display: flex;
     flex-direction: column;
@@ -145,7 +152,7 @@ section .box:last-child svg path:nth-child(2){fill: #00eeff;}
     height: max-content;
     border-radius: 10px;
     box-shadow: 0 0 5px black;
-    background: #041983;
+    background: #01051cd4;
 }
 .source article .pict {
     display: flex;
@@ -186,6 +193,7 @@ section .box:last-child svg path:nth-child(2){fill: #00eeff;}
 }
 .source article .information ul li a,
 .source article .information ul li button {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,12 +210,12 @@ section .box:last-child svg path:nth-child(2){fill: #00eeff;}
 }
 .donation {
     position: fixed;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transform: translate(-50%, -50%) scale(0);
-    background: #191919;
+    transform: translate(-50%, -50%);
+    background: #01051c;
     color: whitesmoke;
     border-radius: 10px;
     outline: 3px solid #37bbdf;
@@ -219,23 +227,220 @@ section .box:last-child svg path:nth-child(2){fill: #00eeff;}
     left: 50%;
     transition: 0.5s all;
 }
-.openDonate {
-    transform: translate(-50%, -50%) scale(1);
-}
 .donation button {
     cursor: pointer;
     position: absolute;
     background: transparent;
     color: #37bbdf;
+    font-weight: bold;
     font-size: 30px;
-    right: 8px;
-    top: 5px;
+    right: 15px;
+    top: 8px;
     border: none;
 }
 .donation strong {color: #37bbdf;}
 .donation img {width: 80%;}
+/* ICON SVG */
+.hero-icon {
+    padding: 20px;
+    justify-content: space-evenly;
+    color: white;
+}
+.hero-icon h1 {color: #00eeff;}
+.hero-icon p {max-width: 900px;}
+.hero-icon p strong {color: #00eeff}
+.hero-icon .input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    width: 90%;
+}
+.hero-icon .input label {
+    position: absolute;
+    font-size: 30px;
+    color: gray;
+    left: 10px;
+}
+.hero-icon .input input {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #22508c;
+    outline: 2px solid white;
+    border-radius: 20px;
+    padding-left: 40px;
+    font-size: 1rem;
+}
+.set-icon {
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    justify-content: center;
+    min-height: 40dvh;
+    gap: 10px;
+    padding: 10px;
+}
+.set-icon .icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+.set-icon .icon:hover {
+    box-shadow: 5px 5px 5px black;
+    background: whitesmoke;
+    color: black;
+    text-shadow: none;
+}
+.set-icon .icon svg {
+    filter: drop-shadow(1px 1px 1px black);
+    fill: whitesmoke;
+    width: 50px;
+    height: 50px;
+}
+.set-icon .icon:hover > svg {
+    filter: none;
+    fill: black;
+}
+.set-icon .icon:hover > p {
+    text-shadow: none;
+}
+.set-icon .icon p {
+    font-size: 18px;
+    text-shadow: 1px 1px 1px black;
+}
+.preview-icon {
+    position: fixed;
+    background: #01051c;
+    transform: translate(-50%, -50%) scale(0);
+    max-width: 800px;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    outline: 1px solid whitesmoke;
+    transition: 0.5s all;
+}
+.preview-icon .top {
+    display: flex;
+}
+.preview-icon .top svg {
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    fill: whitesmoke;
+}
+.preview-icon .top .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+.preview-icon .top .information span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 5px;
+}
+.preview-icon .top .information span button {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #191919;
+    border: none;
+    padding: 2px 20px;
+}
+.preview-icon .top .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.preview-icon .top .btn b {
+    color: #00eeff;
+}
+.preview-icon .top .btn button {
+    cursor: pointer;
+    width: 50%;
+    height: 35px;
+    background: whitesmoke;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+.preview-icon pre {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #0c1a5d;
+    padding-left: 10px;
+    gap: 20px;
+    min-height: 30dvh;
+    border-radius: 10px;
+    color: #00eeff;
+}
+.preview-icon pre code {
+    cursor: pointer;
+    scrollbar-width: none;
+    overflow: scroll;
+    font-weight: bold;
+}
+.preview-icon pre .corner {color: gray;}
+.preview-icon pre .atribute {color: #ffae00;}
+.preview-icon pre p {
+    background: #01051c;
+    padding: 5px 20px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    border-radius: 10px;
+    color: whitesmoke;
+    opacity: 0;
+    transition: 0.5s all;
+}
+.preview-icon pre small {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 20px;
+    position: absolute;
+    color: #d1d2d2;
+    text-align: center;
+}
+.preview-icon .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 30px 10px;
+    border-radius: 10px;
+    height: 20%;
+}
+.preview-icon .bottom b {
+    color: #00eeff;
+}
+.alert-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40dvh;
+}
 .shop {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -294,7 +499,7 @@ section .box:last-child svg path:nth-child(2){fill: #00eeff;}
     gap: 10px;
 }
 .product .bottom .rating i {
-    color: rgb(255, 119, 0);
+    color: rgb(255, 0, 0);
     padding: 5px;
     border-radius: 5px;
     font-size: 13px;
@@ -312,95 +517,56 @@ section .box:last-child svg path:nth-child(2){fill: #00eeff;}
 .product .bottom b {
     color: black;
 }
-/* PACKAGES */
-.packages {
+/* ABOUT */
+.about {
+    justify-content: start;
+    height: auto;
+    gap: 100px;
+}
+.about .box {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: max-content;
-    padding: 50px 0;
+    text-align: left;
     gap: 50px;
+    width: 90%;
+    max-width: 800px;
 }
-.packages .package {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.about .box .image {
+    display: grid;
     overflow: hidden;
-    align-items: center;
-    border: 1px solid whitesmoke;
-    color: whitesmoke;
-    width: 95%;
-    max-width: 400px;
-    padding-bottom: 20px;
-    box-shadow: 10px 10px 20px black;
-    border-radius: 20px;
-    height: 90dvh;
+    place-items: center;
+    background: #01051c;
+    box-shadow: 10px 10px 10px black;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 1px solid #00eeff;
 }
-.packages .package .type {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #041983;
-    text-shadow: 5px 5px 5px black;
-    border: inherit;
-    width: 100%;
-    height: 10%;
-    font-size: 1.5rem;
-}
-.packages .package .pricing {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background: whitesmoke;
-    color: #041983;
-    font-size: 1.5rem;
-    width: 100%;
-    height: 20%;
-}
-.packages .package .description {
-    text-align: center;
-    padding: 10px;
-    color: whitesmoke;
-    height: 10%;
-    font-size: 1.2rem;
-}
-.packages .package .fitur {
-    width: 100%;
-    height: 50%;
-    padding: 20px;
-    font-size: 1.2rem;
+.about .box span {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-.packages .package .fitur i {
-    color: #22ff00;
-}
-.packages .package .cta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
     color: whitesmoke;
-    width: 100%;
-    padding: 20px;
 }
-.packages .package .cta a {
+.about .box span b {
+    color: #00eeff;
+}
+.about .box span h1,
+.about .box span h2 {
+    color: #00eeff;
+    font-size: 3rem;
+}
+.about .box .sosial-media {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 10px;
     width: 100%;
-    height: 40px;
-    background: linear-gradient(to right bottom,#00eeff, #00ffb3);
-    border: 2px solid #041983;
-    outline: 2px solid whitesmoke;
-    color: #041983;
-    font-weight: bold;
-    border-radius: 10px;
+}
+.about .box .sosial-media a {
+    font-size: 20px;
+    color: #00eeff;
 }
 footer {
     font-size: 1rem;
@@ -410,17 +576,10 @@ footer {
     justify-content: center;
     align-items: center;
     height: 20dvh;
-}
-footer a {
-    color: #00eeff;
+    color: whitesmoke;
 }
 @media only screen and (max-width: 1200px){
-    section .box:nth-child(1){padding: 0 50px;}
-    section .box:last-child svg {width: 90%;}
-    section .box h2 {font-size: 2rem;}
-    header nav ul {
-        gap: 20px;
-    }
+    header nav ul {gap: 20px;}
 }
 @media only screen and (max-width: 1000px){
     header nav ul{gap: 10px;}
@@ -428,9 +587,9 @@ footer a {
 @media only screen and (max-width: 900px){
     header nav ul{gap: 5px;}
     header nav ul li a {font-size: 1rem;}
+    section h1 {font-size: 2.5rem;}
 }
 @media only screen and (max-width: 800px){
-    section .box:nth-child(1) {align-items: center;text-align: center;}
     header {
         display: flex;
         justify-content: space-between;
@@ -442,29 +601,23 @@ footer a {
         position: fixed;
         flex-direction: column;
         justify-content: space-evenly;
-        background: #041983;
-        top: 0;
-        right: -100%;
+        background: linear-gradient(to right bottom,#01051ce0, #040f50e4);
+        box-shadow: -5px 0 10px black;
+        backdrop-filter: blur(10px);
+        transition: 0.5s all;
         width: 90%;
         height: 100%;
-        transition: 0.5s all;
+        right: -100%;
+        top: 0;
         gap: 0;
     }
     header nav ul li {width: 90%;}
-    header nav ul li a {font-size: 1.5rem;}
+    header nav ul li a {font-size: 1.2rem;}
     header nav ul li a:hover {
         background: whitesmoke;
         color: #041983;
     }
-    section p {font-size: 1rem;}
-    section {flex-direction: column-reverse;}
-    .packages {flex-direction: column;}
-    .shop {flex-direction: row;}
-    section .box {width: 100%;height: 50%;}
-    section .box:nth-child(1){
-        width: 100%;
-        padding: 0 20px;
-    }
+    .set-icon, .shop {flex-direction: row;}
     .source article {
         flex-direction: column;
     }
@@ -472,11 +625,21 @@ footer a {
         width: 100%;
     }
 }
+@media only screen and (max-width: 550px) {
+    section h1 {font-size: 2rem;}
+}
 @media only screen and (max-width: 500px){
+    .about .box span h1,
+    .about .box span h2 {font-size: 2rem;}
     .product {width: 48%;}
     .product .top img {height: 150px;}
     .product .bottom .rating i,
     .product .bottom .rating a {
         font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 440px) {
+    section h1 {
+        font-size: 1.4rem;
     }
 }

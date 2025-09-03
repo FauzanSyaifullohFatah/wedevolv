@@ -3,32 +3,37 @@
         {
             "id" : 1,
             "title" : "Keyboard Test",
-            "description" : "Ini adalah Keyboard Test yang dibuat menggunakan HTML, CSS, dan JavaScript. Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian. Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨",
-            "link" : "https://fauzansyaifullohfatah.github.io/keyboardtest/"
+            "description" : "This is a Keyboard Test built using HTML, CSS, and JavaScript. You can use it, modify it, or develop it according to your needs. Don’t forget to support with a donation so more creative ideas can continue to grow 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/keyboardtest/",
+            "download" : "https://github.com/fauzansyaifullohfatah/keyboardtest/archive/refs/heads/main.zip"
         },
         {
             "id" : 2,
             "title" : "Drumpad | Using Keyboard",
-            "description" : "Ini adalah contoh sederhana membuat Drumpad untuk hiburan yang dibuat menggunakan HTML CSS, dan JavaScript. Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian. Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨",
-            "link" : "https://fauzansyaifullohfatah.github.io/DrumPad/"
+            "description" : "This is a simple example of creating a Drum Pad for fun using HTML, CSS, and JavaScript. You can use it, modify it, or develop it according to your needs. Don’t forget to support with a donation so more creative ideas can continue to grow 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/DrumPad/",
+            "download" : "https://github.com/fauzansyaifullohfatah/DrumPad/archive/refs/heads/main.zip"
         },
         {
             "id" : 3,
             "title" : "Form Login/Register",
-            "description" : "Ini adalah contoh form Login dan Register yang dibuat menggunakan HTML, CSS, dan JavaScript. Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian. Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨",
-            "link" : "https://fauzansyaifullohfatah.github.io/FormLogin/"
+            "description" : "This is an example of a Login and Register form built using HTML, CSS, and JavaScript. You can use it, modify it, or develop it according to your needs. Don’t forget to support with a donation so more creative ideas can continue to grow 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/FormLogin/",
+            "download" : "https://github.com/fauzansyaifullohfatah/FormLogin/archive/refs/heads/main.zip"
         },
         {
             "id" : 4,
             "title" : "Landing Page",
-            "description" : "Membangun landing page modern & interaktif yang bukan cuma enak dilihat, tapi juga nyaman digunakan. Dibuat menggunakan HTML & CSS. Kalian bisa gunakan, ubah, atau kembangkan sesuai kebutuhan kalian. Jangan lupa dukung dengan donasi agar ide-ide kreatif lainnya bisa terus berkembang 🙌✨",
-            "link" : "https://fauzansyaifullohfatah.github.io/LandingPage/"
+            "description" : "Building a modern & interactive landing page that’s not only visually appealing but also user-friendly. Made with HTML & CSS. You can use it, modify it, or develop it according to your needs. Don’t forget to support with a donation so more creative ideas can continue to grow 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/LandingPage/",
+            "download" : "https://github.com/fauzansyaifullohfatah/LandingPage/archive/refs/heads/main.zip"
         },
         {
             "id" : 5,
             "title" : "Roll Dice",
-            "description" : "Ini sebuah project sederhana tapi seru yang bisa kamu coba langsung di browser. 🎲 Dengan project ini, kamu bisa melempar dadu digital hanya dengan sekali klik tombol. Hasilnya langsung acak dari angka 1 sampai 6, persis seperti dadu sungguhan. Kenapa saya buat ini? Karena seringkali kita butuh dadu untuk main game, menentukan giliran, atau sekadar seru-seruan bersama teman, tapi kadang nggak punya dadu fisik. Nah, dengan Roll Dice ini, semuanya jadi praktis — tinggal buka web dan klik tombolnya. 🙌✨",
-            "link" : "https://fauzansyaifullohfatah.github.io/rolldice/"
+            "description" : "This is a simple yet fun project you can try directly in your browser. 🎲 With this project, you can roll a digital dice with just one click. The result is random, from 1 to 6, just like a real dice. Why did I make this? Because sometimes we need dice to play games, decide turns, or just have fun with friends — but often don’t have a physical dice around. With Roll Dice, everything becomes practical — just open the web and click the button 🙌✨",
+            "link" : "https://fauzansyaifullohfatah.github.io/rolldice/",
+            "download" : "https://github.com/fauzansyaifullohfatah/rolldice/archive/refs/heads/main.zip"
         }
     ]
 }

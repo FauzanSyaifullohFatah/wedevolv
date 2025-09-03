@@ -16,7 +16,7 @@ async function getDataSourceCode(fileJson, boxElement){
                     <div class="description">${e.description}</div>
                     <ul>
                         <li><a href="${e.link}" target="_blank">Lihat</a></li>
-                        <li><a href="">Download</a></li>
+                        <li><a href="${e.download}">Download</a></li>
                         <li><button onclick="donate();">Donate</button></li>
                     </ul>
                 </div>
@@ -41,45 +41,15 @@ async function getDataProduct(fileJson, boxElement){
                 <div class="bottom">
                     <div class="title" style="color: black;">${e.title}</div>
                     <div class="price">
-                        <b>${e.price}</b>
+                        <b>Rp${e.price}</b>
                         <small>${e.selling} terjual online</small>
                     </div>
                     <div class="rating">
-                        <i class="fa fa-star"> 4.8</i> <a href="${e.link}" target="_blank"> Beli Sekarang Juga</a>
+                        <i class="wd-star"> 4.8</i> <a href="${e.link}" target="_blank"> Beli Sekarang Juga</a>
                     </div>
                     <b style="font-size: 10px;">${e.brand}</b>
                 </div>
             </article>
-            `;
-        })
-    } catch {
-        console.error("Error", error);
-    }
-}
-async function getDataPackage(boxElement){
-    const whatsApp = 6281286400894;
-    try {
-        const response = await fetch(`../json/packages.json`);
-        const data = await response.json();
-        // data.packages.sort((a, b) => b.id - a.id);
-        data.packages.forEach(e => {
-            var fiturList = "";
-            const list = e.fitur.forEach(l =>{
-                fiturList += `<li><i class="fa fa-check-circle-o"></i> ${l}</li>`;
-                return fiturList;
-            })
-            const pesan = `Halo, Saya ingin memesan ${e.type}-Website.`;
-            boxElement.innerHTML += `
-            <div class="package">
-                <div class="type"><h3>${e.type}</h3></div>
-                <div class="pricing">Mulai Dari <b>${e.pricing}</b></div>
-                <div class="description">${e.description}</div>
-                <ul class="fitur">${fiturList}</ul>
-                <div class="cta">
-                    <b>${e.cta}</b>
-                    <a href="https://wa.me/${whatsApp}?text=${encodeURIComponent(pesan)}" target="_blank"><i class="fa fa-shopping-cart"></i>Pesan Sekarang</a>
-                </div>
-            </div>
             `;
         })
     } catch {

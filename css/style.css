@@ -154,7 +154,8 @@ section h1 strong {color: #00eeff;}
     height: max-content;
     border-radius: 10px;
     box-shadow: 0 0 5px black;
-    background: #01051cd4;
+    background: #5b87e690;
+    border: 1px solid whitesmoke;
 }
 .source article .pict {
     display: flex;
@@ -169,7 +170,6 @@ section h1 strong {color: #00eeff;}
     display: flex;
     box-shadow: 0 0 10px black;
     width: 400px;
-    opacity: 0.8;
 }
 .source article .pict .landscape img {
     width: 100%;
@@ -201,7 +201,8 @@ section h1 strong {color: #00eeff;}
     align-items: center;
     background: #041983;
     color: whitesmoke;
-    border: none;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
     width: 100%;
     height: 30px;
 }

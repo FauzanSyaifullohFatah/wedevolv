@@ -31,6 +31,7 @@ header {
     height: 10dvh;
     width: 100%;
 }
+
 header span {
     display: flex;
     justify-content: center;
@@ -82,7 +83,8 @@ header nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40dvh;
+    min-height: 50dvh;
+    height: max-content;
     padding: 20px;
     text-align: center;
 }

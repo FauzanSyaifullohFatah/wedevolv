@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Source Code Gratis — Download Template & Contoh Project | Wedevolv</title>
-    <meta name="description" content="Koleksi source code gratis: template portfolio, landing page, blog, dan komponen UI. Mudah diunduh dan siap pakai untuk belajar atau proyek.">
-    <meta name="keywords" content="source code gratis, download template, template portfolio, landing page gratis, contoh project, wedevolv">
+    <title>Free Source Code — Templates & Project Examples | Wedevolv</title>
+    <meta name="description" content="Free source code collection: portfolio templates, landing pages, blogs, and UI components. Easy to download and ready to use for learning or projects.">
+    <meta name="keywords" content="free source code, download templates, portfolio template, free landing page, project examples, wedevolv">
     <meta name="author" content="Fauzan Syaifulloh Fatah">
 
-    <meta property="og:title" content="Source Code Gratis — Template & Contoh Project">
-    <meta property="og:description" content="Download source code gratis dan mulai bangun websitemu dengan contoh project dari Wedevolv.">
+    <meta property="og:title" content="Free Source Code — Templates & Project Examples">
+    <meta property="og:description" content="Download free source code and start building your website with project examples from Wedevolv.">
     <meta property="og:url" content="https://wedevolv.com/source.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://wedevolv.com/assets/img/logo/preview.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Source Code Gratis — Wedevolv">
-    <meta name="twitter:description" content="Template portfolio, landing page, dan komponen UI yang bisa diunduh gratis.">
+    <meta name="twitter:title" content="Free Source Code — Wedevolv">
+    <meta name="twitter:description" content="Portfolio templates, landing pages, and UI components available for free download.">
     <meta name="twitter:image" content="https://wedevolv.com/assets/img/logo/preview.png">
 
     <!-- adsense -->
@@ -25,11 +25,11 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3579678253854649" crossorigin="anonymous"></script>
     <!-- adsense -->
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/img/logo/wedevolv.png" type="image/png">
 </head>
 <body>
+    <div class="bg"></div>
     <header>
         <span>
             <svg viewBox="0 0 2250 2250">
@@ -41,20 +41,28 @@
         <input type="checkbox" id="open-navigation">
         <nav>
             <ul>
-                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="source.html">Source Code <div class="active"></div></a></li>
-                <li><a href="icon.html">Ikon (SVG)</a></li>
-                <li><a href="shop.html">Belanja</a></li>
-                <li><a href="about.html">Tentang</a></li>
-                <li><a href="contact.html">Kontak</a></li>
-                <li><a href="createWebsite.html">Buat Website</a></li>
+                <li><a href="icon.html">Icon (SVG)</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
         <label for="open-navigation">
-            <i class="fa fa-bars"></i>
+            <span class="wd-bar"></span>
         </label>
     </header>
     <main>
+        <div class="hero hero-source">
+            <span>
+                <i class="wd-code"></i>
+                <h1>SOURCE CODE</h1>
+            </span>
+            <div class="text">
+                <p>Ready-to-Use Source Code Getclean, well-structured source code for web projects and prototypes.</p>
+                <p>Easy to understand, modify, andintegrate — perfect for developers at any level.</p>
+            </div>
+        </div>
         <div class="miniNavbar">
         </div>
         <section class="source"></section>
@@ -65,22 +73,23 @@
                 <p>Fauzan Syaifulloh Fatah</p>
                 <p><strong>Blu BCA</strong> 0094-4102-874</p>
             </div>
-            <button id="closeDonate" aria-label="Close Donation"><i class="fa fa-window-close"></i></button>
+            <button id="closeDonate" aria-label="Close Donation">X</button>
         </div>
     </main>
     <footer>
         <span>&copy; 2025 Wedevolv. All Rights Reserved.</span>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/icons.js"></script>
     <script>
         const boxDonation = document.getElementsByClassName("donation")[0];
         const sourceCode = document.getElementsByClassName("source")[0];
         getDataSourceCode("source", sourceCode);
         function donate(){
-            boxDonation.classList.add("openDonate");
+            boxDonation.style.display = "flex";
             var back = document.getElementById("closeDonate");
             back.onclick = function(){
-                boxDonation.classList.remove("openDonate");
+                boxDonation.style.display = "none";
             }
         }
     </script>

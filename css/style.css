@@ -104,20 +104,38 @@ header nav ul li a {
     height: 100%;
     color: #041983;
 }
-section {
-    display: flex;
-    flex-direction: column;
-    height: 70dvh;
-    padding: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
+section h1 strong {color: #00eeff;}
+.home {
+    min-height: 70dvh;
+    height: auto;
 }
-section h1 {
+.home h1 {
     font-size: 3rem;
 }
-section h1 strong {color: #00eeff;}
+.home h1 strong,
+.home h2 {
+    color: #00eeff;
+}
+.home h2 {
+    text-align: center;
+    padding: 20px;
+}
+.home .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.home .features article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+}
+.home .features article h3,
+.home .features article a {
+    color: #00eeff;
+}
 /* SOURCE CODE */
 .hero-source {
     gap: 20px;
@@ -299,6 +317,9 @@ section h1 strong {color: #00eeff;}
     background: whitesmoke;
     color: black;
     text-shadow: none;
+}
+.set-icon .icon h2 {
+    font-size: 12px;
 }
 .set-icon .icon svg {
     filter: drop-shadow(1px 1px 1px black);
@@ -522,6 +543,9 @@ section h1 strong {color: #00eeff;}
 }
 /* ABOUT */
 .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: start;
     height: auto;
     gap: 100px;
@@ -571,16 +595,42 @@ section h1 strong {color: #00eeff;}
     font-size: 20px;
     color: #00eeff;
 }
-footer {
-    font-size: 1rem;
+.about .box span ul li a {
+    color: #00eeff;
+}
+.template {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 100px 200px;
+}
+.template h1,
+.template h2,
+.template strong,
+.template a {
+    color: #00eeff;
+}
+footer {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1rem;
+    gap: 10px;
     height: 20dvh;
+}
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+footer ul li a,
+footer p {
+    font-size: 1rem;
     color: whitesmoke;
 }
+footer ul li a svg {color: #00eeff;}
 @media only screen and (max-width: 1200px){
     header nav ul {gap: 20px;}
 }
@@ -590,7 +640,7 @@ footer {
 @media only screen and (max-width: 900px){
     header nav ul{gap: 5px;}
     header nav ul li a {font-size: 1rem;}
-    section h1 {font-size: 2.5rem;}
+    .home h1 {font-size: 2.5rem;}
 }
 @media only screen and (max-width: 800px){
     header {
@@ -629,7 +679,7 @@ footer {
     }
 }
 @media only screen and (max-width: 550px) {
-    section h1 {font-size: 2rem;}
+    .home h1 {font-size: 2rem;}
 }
 @media only screen and (max-width: 500px){
     .about .box span h1,
@@ -644,5 +694,10 @@ footer {
 @media only screen and (max-width: 440px) {
     section h1 {
         font-size: 1.4rem;
+    }
+}
+@media only screen and (max-width: 420px) {
+    footer ul li a, footer p {
+        font-size: 0.8rem;
     }
 }

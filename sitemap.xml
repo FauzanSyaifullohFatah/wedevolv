@@ -44,4 +44,29 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://wedevolv.com/privacy.html</loc>
+        <lastmod>2025-09-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Disclaimer -->
+    <url>
+        <loc>https://wedevolv.com/disclaimer.html</loc>
+        <lastmod>2025-09-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Terms of Service -->
+    <url>
+        <loc>https://wedevolv.com/terms.html</loc>
+        <lastmod>2025-09-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
 </urlset>

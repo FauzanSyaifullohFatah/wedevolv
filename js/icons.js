@@ -1,5 +1,6 @@
 let iconsData = [];
 
+// fetch("json/icons.json").then(res => res.json())
 fetch("https://wedevolv.com/json/icons.json").then(res => res.json())
 .then(data => {
     iconsData = data;

@@ -42,11 +42,17 @@
         <input type="checkbox" id="open-navigation">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="https://wedevolv.com/">Home</a></li>
+                <li><a href="https://wedevolv.com/source.html">Source Code</a></li>
+                <li><a href="https://wedevolv.com/icon.html">Icon (SVG) <div class="active"></div></a></li>
+                <li><a href="https://wedevolv.com/shop.html">Shop</a></li>
+                <li><a href="https://wedevolv.com/about.html">About & Contact</a></li>
+
+                <!-- <li><a href="index.html">Home</a></li>
                 <li><a href="source.html">Source Code</a></li>
                 <li><a href="icon.html">Icon (SVG) <div class="active"></div></a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html">About & Contact</a></li> -->
             </ul>
         </nav>
         <label for="open-navigation">
@@ -54,7 +60,7 @@
         </label>
     </header>
     <main>
-        <div class="hero hero-icon">
+        <section class="hero hero-icon">
             <h1><span id="ttl-icon"></span> Free SVG Icons — Ready to Use</h1>
             <p>Quickly search, preview, copy, or download. Inline SVGs make customization with CSS effortless.</p>
             <p class="disclaimer"><strong>Disclaimer:</strong> Some icons are original creations by us, while others are trademarks owned by their respective companies. Third-party icons are provided solely for educational, prototyping, and non-commercial use.</p>
@@ -62,14 +68,14 @@
                 <label for="search-icon" class="wd-search"></label>
                 <input type="text" id="search-icon" placeholder="Search icon" autocomplete="off">
             </div>
-        </div>
-        <div class="set-icon"></div>
-        <div class="preview-icon"></div>
-        <div class="alert-icon">
+        </section>
+        <section class="set-icon"></section>
+        <section class="preview-icon"></section>
+        <section class="alert-icon">
             <p>Sorry, the icon you’re looking for is not available.</hp>
             <p>Tell us which icon you need, and we’ll add it for you!</p>
-        </div>
-        <div class="donation">
+        </section>
+        <section class="donation">
             <h2>Support Us / <strong>Donate</strong></h2>
             <img src="assets/img/barcodeqris/qrisBluBca.png" alt="barcode.png">
             <div class="info">
@@ -77,8 +83,21 @@
                 <p><strong>Blu BCA</strong> 0094-4102-874</p>
             </div>
             <button id="closeDonate" aria-label="Close Donation">X</button>
-        </div>
+        </section>
     </main>
+    <footer>
+        <ul>
+            <!-- <li><a href="https://wedevolv.com/privacy.html" class="wd-privacy-police">Privacy Police</a></li>
+            <li><a href="https://wedevolv.com/disclaimer.html" class="wd-warning">Disclaimer</a></li>
+            <li><a href="https://wedevolv.com/terms.html" class="wd-hand-shake">Terms of Service</a></li> -->
+
+            <li><a href="privacy.html" class="wd-privacy-police">Privacy Police</a></li>
+            <li><a href="disclaimer.html" class="wd-warning">Disclaimer</a></li>
+            <li><a href="terms.html" class="wd-hand-shake">Terms of Service</a></li>
+        </ul>
+        <p>&copy; 2025 Wedevolv. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
     <script src="js/icons.js"></script>
     <script>
         const searchIcon =  document.getElementById("search-icon");
@@ -91,14 +110,14 @@
         .then(data => {
             data.forEach(i => {
             setIcon.innerHTML += `
-                <div class="icon" 
-                    data-id="${i.id}" 
-                    data-name="${i.name}" 
-                    data-category="${i.category}" 
-                    data-official="${i.official}" 
+                <div class="icon"
+                    data-id="${i.id}"
+                    data-name="${i.name}"
+                    data-category="${i.category}"
+                    data-official="${i.official}"
                     data-copyright="${i.copyright}">
                     ${i.svg}
-                    <small>${i.name}</small>
+                    <h2>${i.name}</h2>
                 </div>
             `;
             });
@@ -109,7 +128,7 @@
             const id = e.getAttribute("data-id");
             const official = e.getAttribute("data-official");
             const svg = e.getElementsByTagName("svg")[0].outerHTML;
-            const nameIcon = e.getElementsByTagName("small")[0].innerHTML;
+            const nameIcon = e.getElementsByTagName("h2")[0].innerHTML;
             const copyRight = e.getAttribute("data-copyright");
 
             let saveCode = escapeHTML(svg);

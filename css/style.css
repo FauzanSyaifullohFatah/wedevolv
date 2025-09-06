@@ -604,6 +604,9 @@ section h1 strong {color: #00eeff;}
     gap: 10px;
     padding: 100px 200px;
 }
+.template h1 {
+    font-size: 3rem;
+}
 .template h1,
 .template h2,
 .template strong,
@@ -636,6 +639,7 @@ footer ul li a svg {color: #00eeff;}
 }
 @media only screen and (max-width: 1000px){
     header nav ul{gap: 10px;}
+    .template {padding: 100px;}
 }
 @media only screen and (max-width: 900px){
     header nav ul{gap: 5px;}
@@ -677,6 +681,7 @@ footer ul li a svg {color: #00eeff;}
     .source article .pict .landscape {
         width: 100%;
     }
+    .template {padding: 50px;}
 }
 @media only screen and (max-width: 550px) {
     .home h1 {font-size: 2rem;}
@@ -690,6 +695,8 @@ footer ul li a svg {color: #00eeff;}
     .product .bottom .rating a {
         font-size: 0.7rem;
     }
+    .template {padding: 20px;}
+    .template h1 {font-size: 2rem;}
 }
 @media only screen and (max-width: 440px) {
     section h1 {

@@ -12,7 +12,7 @@
             "name": "Wedevolv",
             "logo": {
             "@type": "ImageObject",
-            "url": "https://wedevolv.com/logo.png"
+            "url": "https://wedevolv.com/assets/img/logo/preview.png"
             }
         }
         },
@@ -23,17 +23,20 @@
         "description": "Free source code collection: portfolio templates, landing pages, blogs, and UI components. Easy to download and ready to use for learning or projects."
         },
         {
-        "@type": "SoftwareSourceCode",
-        "name": "Wedevolv Icon Library",
-        "url": "https://wedevolv.com/icon.html",
-        "codeRepository": "https://github.com/wedevolv/wd-icons",
-        "programmingLanguage": "JavaScript",
-        "description": "A collection of free SVG icons and lightweight illustrations for websites, apps, and UI projects. Easy to download, scalable, and customizable."
+            "@type": "SoftwareSourceCode",
+            "name": "Wedevolv Icon Library",
+            "url": "https://wedevolv.com/icon.html",
+            "programmingLanguage": "JavaScript",
+            "description": "A collection of free SVG icons and lightweight illustrations for websites, apps, and UI projects. Easy to download, scalable, and customizable.",
+            "exampleOfWork": {
+                "@type": "CreativeWork",
+                "url": "https://wedevolv.com/js/icons.js"
+            }
         },
         {
         "@type": "Product",
         "name": "Wedevolv Shop",
-        "image": "https://wedevolv.com/shop-preview.png",
+        "image": "https://wedevolv.com/assets/img/logo/preview.png",
         "description": "Rekomendasi produk terbaik untuk developer & desainer: hosting, domain, tema, alat desain — link affiliate terpercaya untuk membantu kamu memilih.",
         "brand": {
             "@type": "Brand",

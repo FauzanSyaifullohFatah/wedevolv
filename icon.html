@@ -117,7 +117,7 @@
                     data-category="${i.category}"
                     data-official="${i.official}"
                     data-copyright="${i.copyright}">
-                    ${i.svg}
+                    ${i.svg.replace('<svg',`<svg role="img" aria-label="${i.name} SVG Icon"`)}
                     <h2>${i.name}</h2>
                 </article>
             `;

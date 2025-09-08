@@ -8,9 +8,10 @@
     text-decoration: none;
 }
 body {
-    color: whitesmoke;
     width: 100%;
     overflow-x: hidden;
+    background: #01051c;
+    color: whitesmoke;
 }
 body .bg {
     z-index: -1;

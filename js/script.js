@@ -45,7 +45,7 @@ async function getDataProduct(fileJson, boxElement){
                         <small>${e.selling} terjual online</small>
                     </div>
                     <div class="rating">
-                        <i class="wd-star"> 4.8</i> <a href="${e.link}" target="_blank"> Beli Sekarang Juga</a>
+                        <i class="wd-star"> ${e.rating}</i> <a href="${e.link}" target="_blank"> Beli Sekarang Juga</a>
                     </div>
                     <b style="font-size: 10px;">${e.brand}</b>
                 </div>

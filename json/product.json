@@ -159,6 +159,86 @@
             "rating"   : "4.8",
             "link"     : "https://vt.tokopedia.com/t/ZSArPy15u/",
             "brand"    : "glad2glow.indo"
+        },
+        {
+            "id"       : 17,
+            "category" : "electronic",
+            "title"    : "Lenovo Ideapad Duet 3i N200 8GB 256GB SSD 11.5 2K IPS 5MP Win11 + OHS",
+            "price"    : "8.240.039",
+            "selling"  : "42",
+            "rating"   : "4.7",
+            "link"     : "https://vt.tokopedia.com/t/ZSHtw1Bh7gYYS-9LI2h/",
+            "brand"    : "LenovoIndonesia"
+        },
+        {
+            "id"       : 18,
+            "category" : "electronic",
+            "title"    : "LENOVO IDEAPAD SLIM 1 13i 14 INTEL CELERON N4500 N4020 8GB W11+OHS 14.0 - LAPTOP ULTRABOOK NOTEBOOK",
+            "price"    : "4.069.260",
+            "selling"  : "530",
+            "rating"   : "5.0",
+            "link"     : "https://vt.tokopedia.com/t/ZSHtwJPhuCxat-DKdtS/",
+            "brand"    : "ProStoreComputer"
+        },
+        {
+            "id"       : 19,
+            "category" : "electronic",
+            "title"    : "LENOVO LOQ ESSENTIAL i5-12450HX RTX 3050 12GB 512GB 15.6 FHD IPS 144Hz PROMO",
+            "price"    : "10.005.093",
+            "selling"  : "265",
+            "rating"   : "5.0",
+            "link"     : "https://vt.tokopedia.com/t/ZSHtwe4UJJpJn-Id1BZ/",
+            "brand"    : "Distri Laptop"
+        },
+        {
+            "id"       : 20,
+            "category" : "electronic",
+            "title"    : "Lenovo Ideapad Slim 3i i3-1315U 256GB SSD 8GB Win11+OHS",
+            "price"    : "6.015.060",
+            "selling"  : "114",
+            "rating"   : "4.9",
+            "link"     : "https://vt.tokopedia.com/t/ZSHtwdM2x2sgK-Q5knp/",
+            "brand"    : "LenovoIndonesia"
+        },
+        {
+            "id"       : 21,
+            "category" : "electronic",
+            "title"    : "Lenovo Ideapad Slim 3i i3-1315U 512GB SSD 8GB Win11+OHS",
+            "price"    : "6.107.550",
+            "selling"  : "737",
+            "rating"   : "5.0",
+            "link"     : "https://vt.tokopedia.com/t/ZSHtwdptjBNmd-cb2hG/",
+            "brand"    : "Sinarmulia Sukses Makmur"
+        },
+        {
+            "id"       : 22,
+            "category" : "electronic",
+            "title"    : "Lenovo LOQ Gaming i7-13650HX RTX4050 512GB SSD 12GB 144Hz 100%sRGB IPS Win11+OHS",
+            "price"    : "15.299.000",
+            "selling"  : "62",
+            "rating"   : "4.9",
+            "link"     : "https://vt.tokopedia.com/t/ZSHtwRyH1ffMj-F3ZgH/",
+            "brand"    : "Sinarmulia Sukses Makmur"
+        },
+        {
+            "id"       : 23,
+            "category" : "electronic",
+            "title"    : "LENOVO Ideapad Slim 3 i3-1215U 256GB/512GB 14 FHD Intel UHD W11 OHS",
+            "price"    : "5.044.955",
+            "selling"  : "1241",
+            "rating"   : "4.9",
+            "link"     : "https://vt.tokopedia.com/t/ZSHtw8d7APsAG-otRvI/",
+            "brand"    : "Collins Official"
+        },
+        {
+            "id"       : 24,
+            "category" : "electronic",
+            "title"    : "LENOVO LOQ 15 17 12650 RTX4050 6GB/16GB 512GB W11 15.6FHD IPS 144Hz-LAPTOP GAMING",
+            "price"    : "12.858.260",
+            "selling"  : "511",
+            "rating"   : "5.0",
+            "link"     : "https://vt.tokopedia.com/t/ZSHtw8b3aJ9DQ-p2YJM/",
+            "brand"    : "ProStoreComputer"
         }
     ]
 }

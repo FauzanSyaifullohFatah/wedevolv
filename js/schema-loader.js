@@ -40,8 +40,7 @@
       "name": "Wedevolv Icon Library",
       "url": "https://wedevolv.com/icon.html",
       "programmingLanguage": "SVG",
-      "description": "A collection of free SVG icons for websites, apps, and UI projects. Scalable, customizable, and lightweight.",
-      "license": "https://creativecommons.org/licenses/by/4.0/"
+      "description": "A collection of free SVG icons for websites, apps, and UI projects. Scalable, customizable, and lightweight."
     };
   }
 
@@ -59,23 +58,11 @@
   // Shop
   else if (pathname.includes("shop.html")) {
     schema = {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Wedevolv Shop",
-      "url": "https://wedevolv.com/shop.html",
-      "description": "Recommended affiliate products for developers & designers: hosting, domains, themes, and tools.",
-      "itemListElement": [
-        {
-          "@type": "Product",
-          "name": "Best Hosting for Developers",
-          "url": "https://affiliate-link.com/hosting"
-        },
-        {
-          "@type": "Product",
-          "name": "Premium Website Theme",
-          "url": "https://affiliate-link.com/theme"
-        }
-      ]
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Wedevolv Shop",
+        "url": "https://wedevolv.com/shop.html",
+        "description": "Belanja produk terbaik lewat link affiliate terpercaya. Dapatkan rekomendasi barang pilihan dari berbagai kategori."
     };
   }
 

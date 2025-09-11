@@ -8,7 +8,7 @@
     <!-- Beranda -->
     <url>
         <loc>https://wedevolv.com/</loc>
-        <lastmod>2025-09-04</lastmod>
+        <lastmod>2025-09-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -16,7 +16,7 @@
     <!-- Source Code Gratis -->
     <url>
         <loc>https://wedevolv.com/source.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <lastmod>2025-09-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -24,23 +24,23 @@
     <!-- Ikon SVG -->
     <url>
         <loc>https://wedevolv.com/icon.html</loc>
-        <lastmod>2025-09-04</lastmod>
-        <changefreq>weekly</changefreq>
+        <lastmod>2025-09-11</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
     <!-- Belanja -->
     <url>
         <loc>https://wedevolv.com/shop.html</loc>
-        <lastmod>2025-09-04</lastmod>
-        <changefreq>daily</changefreq>
+        <lastmod>2025-09-11</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Tentang -->
     <url>
         <loc>https://wedevolv.com/about.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <lastmod>2025-09-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -48,7 +48,7 @@
     <!-- Privacy Policy -->
     <url>
         <loc>https://wedevolv.com/privacy.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <lastmod>2025-09-11</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -56,7 +56,7 @@
     <!-- Disclaimer -->
     <url>
         <loc>https://wedevolv.com/disclaimer.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <lastmod>2025-09-11</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -64,9 +64,8 @@
     <!-- Terms of Service -->
     <url>
         <loc>https://wedevolv.com/terms.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <lastmod>2025-09-11</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
-
 </urlset>

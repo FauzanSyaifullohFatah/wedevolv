@@ -109,82 +109,107 @@
         fetch("json/icons.json")
         .then(icon => icon.json())
         .then(data => {
-            data.forEach(i => {
-            setIcon.innerHTML += `
-                <article class="icon"
-                    id="${i.id}"
-                    data-name="${i.name}"
-                    data-category="${i.category}"
-                    data-official="${i.official}"
-                    data-copyright="${i.copyright}">
-                    ${i.svg.replace('<svg',`<svg role="img" aria-label="${i.name} SVG Icon"`)}
-                    <h2>${i.name}</h2>
-                </article>
-            `;
-            });
+            Object.entries(data).forEach(([category, items]) => {
+                let html = `
+                    <div class="category" data-category="${category}">
+                    <span>
+                        <h2>${category} Icon <small>(${items.length})</small></h2>
+                    </span>
+                    <article>
+                `;
+                items.forEach(item => {
+                    let svgWithAttrs = item.svg.replace(
+                        "<svg",
+                        `<svg
+                            id="${item.id}"
+                            role="img"
+                            aria-label="${item.name}"
+                            data-official="${item.official}"
+                            data-copyright="${item.copyright}"
+                        `
+                    );
+                    html += `
+                    <div class="icon" data-name="${item.name}">
+                        ${svgWithAttrs}
+                        <h3>${item.name}</h3>
+                    </div>
+                    `;
+                });
+                html += `</article></div>`;
+                setIcon.innerHTML += html;
+            })
+            const allIcons = Object.entries(data).flatMap(([category, items]) =>
+            items.map(icon => ({
+                ...icon,
+                category
+            }))
+            );
             const schema = {
-                "@context": "https://schema.org",
-                "@type": "ItemList",
-                "name": "Free SVG Icons",
-                "itemListElement": data.map((i, index) => ({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Free SVG Icons",
+            "itemListElement": allIcons.map((icon, index) => ({
                 "@type": "ListItem",
                 "position": index + 1,
-                "name": i.name,
-                "url": `https://wedevolv.com/icon.html#${i.id}`
-                }))
+                "name": icon.name,
+                "url": `https://wedevolv.com/icon.html#${icon.id}`,
+                "about": icon.category
+            }))
             };
             const script = document.createElement("script");
             script.type = "application/ld+json";
-            script.text = JSON.stringify(schema, null, 2);
+            script.textContent = JSON.stringify(schema, null, 2);
             document.head.appendChild(script);
 
             const icon = setIcon.querySelectorAll(".icon");
             icon.forEach(e => {
-            ttlIcon.innerHTML = document.querySelectorAll(".icon").length;
-            const id = e.getAttribute("id");
-            const official = e.getAttribute("data-official");
-            const svg = e.getElementsByTagName("svg")[0].outerHTML;
-            const nameIcon = e.getElementsByTagName("h2")[0].innerHTML;
-            const copyRight = e.getAttribute("data-copyright");
+                ttlIcon.innerHTML = document.querySelectorAll(".icon").length;
+                const svg = e.getElementsByTagName("svg")[0];
 
-            let saveCode = escapeHTML(svg);
-            e.onclick = function () {
-                previewIcon.style.transform = "translate(-50%, -50%) scale(1)";
-                previewIcon.innerHTML = `
-                    <div class="top">
-                        ${svg}
-                        <div class="information">
-                            <span>${nameIcon} <button onclick="closePreview();" name="closePreview">x</button></span>
-                            <div class="btn">
-                                <b>&copy; ${copyRight}</b>
-                                <button onclick="donate();">Donate</button>
+                const id = svg.getAttribute("id");
+                const official = svg.getAttribute("data-official");
+                const copyRight = svg.getAttribute("data-copyright");
+                const code = svg.outerHTML;
+                const nameIcon = e.getElementsByTagName("h3")[0].innerHTML;
+
+                let saveCode = escapeHTML(code);
+                e.onclick = function () {
+                    previewIcon.style.transform = "translate(-50%, -50%) scale(1)";
+                    previewIcon.innerHTML = `
+                        <div class="top">
+                            ${code}
+                            <div class="information">
+                                <span>${nameIcon} <button onclick="closePreview();" name="closePreview">x</button></span>
+                                <div class="btn">
+                                    <b>&copy; ${copyRight}</b>
+                                    <button onclick="donate();">Donate</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <pre id="select-code">
-                        <code onclick="copyCode(this);"><span class="corner">&lt;</span>script src<span class="corner">=</span><span class="atribute">"https://wedevolv.com/js/icons.js"</span><span class="corner">&gt;&lt;/</span>script<span class="corner">&gt;</span></code>
-                        <code onclick="copyCode(this);"><span class="corner">&lt;</span>span class<span class="corner">=</span><span class="atribute">"${id}"</span><span class="corner">&gt;&lt;/</span>span<span class="corner">&gt;</span></code>
-                        <code onclick="copyCode(this);">${highlightCode(saveCode)}</code>
-                        <small>Tap tag to copy</small>
-                        <p id="copied">copied</p>
-                    </pre>
-                `;
-                if (official === "true") {
-                previewIcon.innerHTML += `
-                    <div class="bottom">
-                        <span>All third-party logos and trademarks (${nameIcon}) are the property of their respective owners and are used solely for identification purposes.</span>
-                        <span><b>&copy; ${copyRight}</b></span>
-                    </div>
-                `;
-                } else {
-                previewIcon.innerHTML += `
-                    <div class="bottom">
-                        <span>Icons not associated with any company or brand are original works or open-source resources, provided for free use in projects and prototypes.</span>
-                        <span><b>&copy; ${copyRight}</b></span>
-                    </div>
-                `;
-                }
-            };
+                        <pre id="select-code">
+                            <code onclick="copyCode(this);"><span class="corner">&lt;</span>script src<span class="corner">=</span><span class="atribute">"https://wedevolv.com/js/icons.js"</span><span class="corner">&gt;&lt;/</span>script<span class="corner">&gt;</span></code>
+                            <code onclick="copyCode(this);"><span class="corner">&lt;</span>span class<span class="corner">=</span><span class="atribute">"${id}"</span><span class="corner">&gt;&lt;/</span>span<span class="corner">&gt;</span></code>
+                            <code onclick="copyCode(this);">${highlightCode(saveCode)}</code>
+                            <small>Tap tag to copy</small>
+                            <p id="copied">copied</p>
+                        </pre>
+                    `;
+                    if (official === "true") {
+                    previewIcon.innerHTML += `
+                        <div class="bottom">
+                            <span>All third-party logos and trademarks (${nameIcon}) are the property of their respective owners and are used solely for identification purposes.</span>
+                            <span><b>&copy; ${copyRight}</b></span>
+                        </div>
+                    `;
+                    } else {
+                    previewIcon.innerHTML += `
+                        <div class="bottom">
+                            <span>Icons not associated with any company or brand are original works or open-source resources, provided for free use in projects and prototypes.</span>
+                            <span><b>&copy; ${copyRight}</b></span>
+                        </div>
+                    `;
+                    }
+                };
             });
         });
         function copyCode(code){
@@ -198,17 +223,27 @@
         searchIcon.oninput = function(){
             const filter = this.value.toLowerCase();
             const icon = document.querySelectorAll(".icon");
+            const category = document.querySelectorAll(".category");
+
             let count = 0;
+
             icon.forEach(i => {
-                const keywordsName = i.dataset.name.toLowerCase();
-                const keywordsCategory = i.dataset.category.toLowerCase();
-                if (keywordsName.includes(filter) || keywordsCategory.includes(filter)){
+            const name = (i.dataset.name || "").toLowerCase();
+                if (name.includes(filter)) {
                     i.style.display = "";
                     count++;
                 } else {
                     i.style.display = "none";
                 }
-            })
+            });
+            category.forEach(c => {
+                const visibleIcons = c.querySelectorAll(".icon:not([style*='display: none'])");
+                if (visibleIcons.length === 0) {
+                    c.style.display = "none"; // hide kategori kalau semua iconnya hidden
+                } else {
+                    c.style.display = ""; // tampilkan kategori kalau ada yang match
+                }
+            });
             setIcon.style.display = (count === 0) ? "none" : "flex";
             alertIcon.style.display = (count === 0) ? "flex" : "none";
         }

@@ -145,16 +145,19 @@
             }))
             );
             const schema = {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "name": "Free SVG Icons",
-            "itemListElement": allIcons.map((icon, index) => ({
-                "@type": "ListItem",
-                "position": index + 1,
-                "name": icon.name,
-                "url": `https://wedevolv.com/icon.html#${icon.id}`,
-                "about": icon.category
-            }))
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": "Free SVG Icons",
+                "itemListElement": allIcons.map((icon, index) => ({
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "item": {
+                    "@type": "Thing",
+                    "name": icon.name,
+                    "url": `https://wedevolv.com/icon.html#${icon.id}`,
+                    "category": icon.category
+                    }
+                }))
             };
             const script = document.createElement("script");
             script.type = "application/ld+json";

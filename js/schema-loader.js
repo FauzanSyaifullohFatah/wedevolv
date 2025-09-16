@@ -54,7 +54,29 @@
       "description": "Free source code collection: portfolio templates, landing pages, blogs, and UI components. Ready to download and customize."
     };
   }
-
+  else if (pathname.includes("onscroll.html")) {
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "Onscroll Animation – Wedevolv",
+      "url": "https://wedevolv.com/onscroll.html",
+      "programmingLanguage": "JavaScript",
+      "description": "Free onscroll animation effects for websites. Ready-to-use scroll-based animations that make web design more engaging and dynamic.",
+      "author": {
+        "@type": "Person",
+        "name": "Fauzan Syaifulloh Fatah"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Wedevolv",
+        "url": "https://wedevolv.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://wedevolv.com/assets/img/logo/preview.png"
+        }
+      }
+    };
+  }
   // Shop
   else if (pathname.includes("shop.html")) {
     schema = {

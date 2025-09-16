@@ -130,6 +130,9 @@ section h1 strong {color: #00eeff;}
 .home .features article {
     display: flex;
     flex-direction: column;
+    background: #19191967;
+    box-shadow: 5px 5px 10px black;
+    padding: 20px;
     gap: 10px;
     width: 45%;
 }
@@ -478,6 +481,32 @@ section h1 strong {color: #00eeff;}
     align-items: center;
     height: 40dvh;
 }
+/* FUNCTION */
+.os-example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+.os-example fieldset {
+    background: #01051c;
+    box-shadow: 10px 10px 10px black;
+    padding: 40px 20px;
+    max-width: 1000px;
+    width: 100%;
+    height: 30dvh;
+}
+.os-example fieldset legend {
+    border: 1px solid whitesmoke;
+    background: linear-gradient(to right bottom, #01051c, #041983);
+    box-shadow: 10px 10px 10px black;
+}
+.os-example fieldset legend h2 {
+    padding: 10px 20px;
+    text-shadow: 1px 1px 10px black;
+}
+/* SHOP */
 .shop {
     display: flex;
     flex-direction: row;

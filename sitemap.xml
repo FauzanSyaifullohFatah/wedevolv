@@ -8,7 +8,7 @@
     <!-- Beranda -->
     <url>
         <loc>https://wedevolv.com/</loc>
-        <lastmod>2025-09-11</lastmod>
+        <lastmod>2025-09-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -16,7 +16,7 @@
     <!-- Source Code Gratis -->
     <url>
         <loc>https://wedevolv.com/source.html</loc>
-        <lastmod>2025-09-11</lastmod>
+        <lastmod>2025-09-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -24,9 +24,17 @@
     <!-- Ikon SVG -->
     <url>
         <loc>https://wedevolv.com/icon.html</loc>
-        <lastmod>2025-09-11</lastmod>
+        <lastmod>2025-09-16</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
+    </url>
+
+    <!-- Onscroll -->
+    <url>
+        <loc>https://wedevolv.com/onscroll.html</loc>
+        <lastmod>2025-09-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 
     <!-- Belanja -->

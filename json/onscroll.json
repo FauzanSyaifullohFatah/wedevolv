@@ -1,0 +1,102 @@
+[
+    {
+      "id": "to-left",
+      "styleStart": {
+        "transform": "translateX(50%) scale(0.8)",
+        "opacity": "0"
+      },
+      "styleEnd": {
+        "transform": "translateX(0%) scale(1)",
+        "opacity": "1"
+      }
+    },
+    {
+      "id": "to-right",
+      "styleStart": {
+        "transform": "translateX(-50%) scale(0.8)",
+        "opacity": "0"
+      },
+      "styleEnd": {
+        "transform": "translateX(0%) scale(1)",
+        "opacity": "1"
+      }
+    },
+    {
+      "id": "from-top",
+      "styleStart": {
+        "transform": "translateY(-50%) scale(0.9)",
+        "opacity": "0"
+      },
+      "styleEnd": {
+        "transform": "translateY(0%) scale(1)",
+        "opacity": "1"
+      }
+    },
+    {
+      "id": "from-bottom",
+      "styleStart": {
+        "transform": "translateY(50%) scale(0.9)",
+        "opacity": "0"
+      },
+      "styleEnd": {
+        "transform": "translateY(0%) scale(1)",
+        "opacity": "1"
+      }
+    },
+    {
+      "id": "scale-y-up",
+      "styleStart": {
+        "transform": "scaleY(0)",
+        "opacity": "0"
+      },
+      "styleEnd": {
+        "transform": "scaleY(1)",
+        "opacity": "1"
+      }
+    },
+    {
+      "id": "scale-x-up",
+      "styleStart": {
+        "transform": "scaleX(0)",
+        "opacity": "0"
+      },
+      "styleEnd": {
+        "transform": "scaleX(1)",
+        "opacity": "1"
+      }
+    },
+    {
+      "id": "scale-up",
+      "styleStart": {
+        "transform": "scale(0)",
+        "opacity": "0"
+      },
+      "styleEnd": {
+        "transform": "scale(1)",
+        "opacity": "1"
+      }
+    },
+    {
+      "id": "flip-vertical",
+      "styleStart": {
+        "transform" : "rotateY(180deg)",
+        "opacity": "0"
+      },
+      "styleEnd": {
+        "transform" : "rotateY(0deg)",
+        "opacity": "1"
+      }
+    },
+    {
+      "id": "flip-horizontal",
+      "styleStart": {
+        "transform" : "rotateX(180deg)",
+        "opacity": "0"
+      },
+      "styleEnd": {
+        "transform" : "rotateX(0deg)",
+        "opacity": "1"
+      }
+    }
+  ]
+  

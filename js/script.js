@@ -15,7 +15,7 @@ async function getDataSourceCode(fileJson, boxElement){
                     <h2><i class="fa fa-code"></i> ${e.title}</h2>
                     <div class="description">${e.description}</div>
                     <ul>
-                        <li><a href="${e.link}" target="_blank">Lihat</a></li>
+                        <li><a href="${e.link}" target="_blank">See</a></li>
                         <li><a href="${e.download}">Download</a></li>
                         <li><button onclick="donate();">Donate</button></li>
                     </ul>

@@ -140,6 +140,24 @@ section h1 strong {color: #00eeff;}
 .home .features article a {
     color: #00eeff;
 }
+.home .features article h3 {
+    text-shadow: 2px 2px 2px black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.home .features article span {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+.home .features article span i {
+    font-size: 50px;
+    padding: 10px;
+    background: #01051c;
+    box-shadow: 1px 1px 5px #00eeff;
+    border-radius: 10px;
+}
 /* SOURCE CODE */
 .hero-source {
     gap: 20px;
@@ -678,7 +696,8 @@ footer p {
     font-size: 1rem;
     color: whitesmoke;
 }
-footer ul li a svg {color: #00eeff;}
+footer ul li a svg,
+footer p span {color: #00eeff;}
 @media only screen and (max-width: 1200px){
     header nav ul {gap: 20px;}
 }
@@ -735,6 +754,9 @@ footer ul li a svg {color: #00eeff;}
     .home h1 {font-size: 2rem;}
 }
 @media only screen and (max-width: 500px){
+    .home .features article span {
+        flex-direction: column;
+    }
     .about .box span h1,
     .about .box span h2 {font-size: 2rem;}
     .product {width: 48%;}

@@ -513,7 +513,8 @@ section h1 strong {color: #00eeff;}
     padding: 40px 20px;
     max-width: 1000px;
     width: 100%;
-    height: 30dvh;
+    min-height: 30dvh;
+    height: auto;
 }
 .os-example fieldset legend {
     border: 1px solid whitesmoke;

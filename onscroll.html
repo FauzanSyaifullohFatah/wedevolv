@@ -63,10 +63,15 @@
             <p style="max-width: 1000px;">
                 This page contains a collection of onscroll animations you can directly use on your website.
                 With these effects, elements appear more engaging as the page scrolls—ranging from slide and fade to dynamic transformations.
-                Simply copy the script into your &lt;head&gt; and add the provided class to your element, and the animation will run automatically.
+                Simply copy the script into your <code class="code">&lt;head&gt;</code> and add the provided class to your element, and the animation will run automatically.
             </p>
         </section>
         <section class="os-example"></section>
+        <section style="text-align: center;padding: 100px 50px;">
+            This demo illustrates the available onscroll effects in action. 
+            To implement them, copy the snippet above and apply the corresponding class to your element. 
+            Each effect is lightweight, responsive, and requires no additional configuration.
+        </section>
     </main>
     <footer>
         <ul>
@@ -77,7 +82,7 @@
         <p><span>&copy;</span> 2025 Wedevolv. All Rights Reserved.</p>
     </footer>
     <script src="js/script.js"></script>
-    <script src="js/icons.js"></script>
+    <script src="js/icons.js" defer></script>
     <script>
         fetch("json/onscroll.json")
         .then(res => res.json())
@@ -85,20 +90,30 @@
             const example = document.getElementsByClassName("os-example")[0];
             data.forEach(e => {
                 example.innerHTML += `
-
                     <fieldset class="${e.id}">
+                        <p class="copy-tag">copied</p>
                         <legend><h2>Onscroll: ${e.id}</h2></legend>
-                        <p>1. Add this script inside &lt;head&gt;:</p>
-                        <code>
-                            &lt;script src="https://wedevolv.com/js/onscroll.js"&gt;&lt;/script&gt;
-                        </code>
-                        <p>2. Use the class on your element:</p>
-                        <code>&lt;div class="${e.id}"&gt;...&lt;/div&gt;</code>
-                        <p>✔ Done! The onscroll animation is ready.</p>
+                        <p class="code">&lt;script src="https://wedevolv.com/js/onscroll.js"&gt;&lt;/script&gt;</p>
+                        <p class="code">&lt;div class="${e.id}"&gt;&lt;/div&gt;</p>
                     </fieldset>
                 `
             })
+            const code = document.querySelectorAll(".code");
+            code.forEach(e => {
+                e.innerHTML = highlightCode(e.innerHTML);
+                e.addEventListener("click", function(){
+                    const info = e.parentElement.children[0];
+                    const tag = e.innerText || e.textContent;
+                    navigator.clipboard.writeText(tag).then(() => {
+                        info.style.opacity = "1";
+                        setTimeout(() => {
+                            info.style.opacity = "0";
+                        }, 500);
+                    })
+                })
+            })
         })
     </script>
+    <script src="js/function.js"></script>
 </body>
 </html>

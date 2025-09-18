@@ -1,4 +1,4 @@
-fetch("../json/onscroll.json")
+fetch("https://wedevolv.com/json/onscroll.json")
   .then(res => res.json())
   .then(data => {
     const observer = new IntersectionObserver((entries) => {
